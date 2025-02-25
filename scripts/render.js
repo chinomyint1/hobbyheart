@@ -1,1 +1,1 @@
-import { profileTemplate } from "./templates.js";
+import { profileTemplate, singleProfileTemplate, likesTemplate } from "./templates";

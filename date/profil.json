@@ -9,7 +9,8 @@
       "quote": "The best way to predict the future is to create it.",
       "sexuality": "bisexual",
       "status": "single",
-      "description": "A passionate reader who loves discovering new stories and ideas. Always looking for new books to dive into."
+      "description": "A passionate reader who loves discovering new stories and ideas. Always looking for new books to dive into.",
+      "image": ""
     },
     {
       "id": 1,
@@ -21,7 +22,8 @@
       "quote": "Life is 10% what happens to us and 90% how we react to it.",
       "sexuality": "heterosexual",
       "status": "in a relationship",
-      "description": "A fitness enthusiast who enjoys staying active. Focused on maintaining a healthy lifestyle through regular workouts."
+      "description": "A fitness enthusiast who enjoys staying active. Focused on maintaining a healthy lifestyle through regular workouts.",
+      "image": ""
     },
     {
       "id": 2,
@@ -33,7 +35,8 @@
       "quote": "Creativity is intelligence having fun.",
       "sexuality": "lesbian",
       "status": "single",
-      "description": "An aspiring yoga teacher who believes in the power of mindfulness and body alignment. Always seeking balance in life."
+      "description": "An aspiring yoga teacher who believes in the power of mindfulness and body alignment. Always seeking balance in life.",
+      "image": ""
     },
     {
       "id": 3,
@@ -45,7 +48,8 @@
       "quote": "Not all those who wander are lost.",
       "sexuality": "heterosexual",
       "status": "married",
-      "description": "A dedicated dancer who loves expressing emotions through movement. Passionate about contemporary dance and choreography."
+      "description": "A dedicated dancer who loves expressing emotions through movement. Passionate about contemporary dance and choreography.",
+      "image": ""
     },
     {
       "id": 4,
@@ -57,7 +61,8 @@
       "quote": "The body achieves what the mind believes.",
       "sexuality": "pansexual",
       "status": "single",
-      "description": "A culinary enthusiast who enjoys experimenting with different cuisines. Always in the kitchen trying new recipes."
+      "description": "A culinary enthusiast who enjoys experimenting with different cuisines. Always in the kitchen trying new recipes.",
+      "image": ""
     },
     {
       "id": 5,
@@ -69,7 +74,8 @@
       "quote": "Success is not the key to happiness. Happiness is the key to success.",
       "sexuality": "heterosexual",
       "status": "engaged",
-      "description": "A music lover who spends time listening to various genres and playing guitar. Currently exploring how music and data intersect."
+      "description": "A music lover who spends time listening to various genres and playing guitar. Currently exploring how music and data intersect.",
+      "image": ""
     },
     {
       "id": 6,
@@ -81,7 +87,8 @@
       "quote": "Write what should not be forgotten.",
       "sexuality": "bisexual",
       "status": "single",
-      "description": "A passionate football fan who enjoys playing the game and analyzing match strategies. Looking for a team to join and grow."
+      "description": "A passionate football fan who enjoys playing the game and analyzing match strategies. Looking for a team to join and grow.",
+      "image": ""
     },
     {
       "id": 7,
@@ -93,7 +100,8 @@
       "quote": "Food is the ingredient that binds us together.",
       "sexuality": "heterosexual",
       "status": "single",
-      "description": "A world traveler who enjoys experiencing different cultures through food. Looking to work in an international restaurant."
+      "description": "A world traveler who enjoys experiencing different cultures through food. Looking to work in an international restaurant.",
+      "image": ""
     },
     {
       "id": 8,
@@ -105,7 +113,8 @@
       "quote": "Dance first. Think later. It's the natural order.",
       "sexuality": "lesbian",
       "status": "in a relationship",
-      "description": "A crochet enthusiast who loves creating handmade scarves and blankets. Looking for a way to sell her creations."
+      "description": "A crochet enthusiast who loves creating handmade scarves and blankets. Looking for a way to sell her creations.",
+      "image": ""
     },
     {
       "id": 9,
@@ -117,7 +126,8 @@
       "quote": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
       "sexuality": "heterosexual",
       "status": "single",
-      "description": "A passionate artist who loves sketching and creating designs. Interested in bringing art and engineering together in creative ways."
+      "description": "A passionate artist who loves sketching and creating designs. Interested in bringing art and engineering together in creative ways.",
+      "image": ""
     },
     {
       "id": 10,
@@ -129,7 +139,8 @@
       "quote": "To plant a garden is to believe in tomorrow.",
       "sexuality": "heterosexual",
       "status": "married",
-      "description": "A bookworm who loves immersing herself in novels. Also dedicated to environmental sustainability and organic farming."
+      "description": "A bookworm who loves immersing herself in novels. Also dedicated to environmental sustainability and organic farming.",
+      "image": ""
     },
     {
       "id": 11,
@@ -141,7 +152,8 @@
       "quote": "Photography is the story I fail to put into words.",
       "sexuality": "heterosexual",
       "status": "single",
-      "description": "A fitness fanatic who loves strength training. Also a photographer interested in capturing real-life moments through his lens."
+      "description": "A fitness fanatic who loves strength training. Also a photographer interested in capturing real-life moments through his lens.",
+      "image": ""
     },
     {
       "id": 12,
@@ -153,7 +165,8 @@
       "quote": "Baking is love made visible.",
       "sexuality": "lesbian",
       "status": "single",
-      "description": "A yoga practitioner who focuses on mindfulness. She's also passionate about baking and creating delicious desserts."
+      "description": "A yoga practitioner who focuses on mindfulness. She's also passionate about baking and creating delicious desserts.",
+      "image": ""
     },
     {
       "id": 13,
@@ -165,7 +178,8 @@
       "quote": "Measure twice, cut once.",
       "sexuality": "heterosexual",
       "status": "married",
-      "description": "A former dancer turned furniture maker. He enjoys combining creativity with craftsmanship in his custom furniture business."
+      "description": "A former dancer turned furniture maker. He enjoys combining creativity with craftsmanship in his custom furniture business.",
+      "image": ""
     },
     {
       "id": 14,
@@ -177,7 +191,8 @@
       "quote": "The only way to do great work is to love what you do.",
       "sexuality": "bisexual",
       "status": "single",
-      "description": "A foodie who enjoys cooking and experimenting with flavors. Also a textile designer passionate about creating beautiful fabrics."
+      "description": "A foodie who enjoys cooking and experimenting with flavors. Also a textile designer passionate about creating beautiful fabrics.",
+      "image": ""
     },
     {
       "id": 15,
@@ -189,7 +204,8 @@
       "quote": "Skateboarding is a lifestyle, not just a sport.",
       "sexuality": "heterosexual",
       "status": "single",
-      "description": "A skateboarder who enjoys designing skateboards and listening to music. Looking to combine these passions into a creative career."
+      "description": "A skateboarder who enjoys designing skateboards and listening to music. Looking to combine these passions into a creative career.",
+      "image": ""
     },
     {
       "id": 16,
@@ -201,7 +217,8 @@
       "quote": "The universe is under no obligation to make sense to you.",
       "sexuality": "heterosexual",
       "status": "divorced",
-      "description": "A football fan who loves playing in his local league. He also works as an astrophysicist and seeks new research projects."
+      "description": "A football fan who loves playing in his local league. He also works as an astrophysicist and seeks new research projects.",
+      "image": ""
     },
     {
       "id": 17,
@@ -213,7 +230,8 @@
       "quote": "The water is your friend. You don't have to fight with water, just share the same spirit as the water.",
       "sexuality": "lesbian",
       "status": "single",
-      "description": "A passionate traveler who loves exploring new destinations. Also an experienced sports coach focused on swimming."
+      "description": "A passionate traveler who loves exploring new destinations. Also an experienced sports coach focused on swimming.",
+      "image": ""
     },
     {
       "id": 18,
@@ -225,20 +243,22 @@
       "quote": "It’s not about being the best. It’s about being better than you were yesterday.",
       "sexuality": "heterosexual",
       "status": "single",
-      "description": "A crochet lover who enjoys creating handmade garments and accessories. Interested in sports management as well."
+      "description": "A crochet lover who enjoys creating handmade garments and accessories. Interested in sports management as well.",
+      "image": ""
     },
     {
-        "id": 19,
-        "username": "Kim",
-        "age": 25,
-        "hobby": "Crochet",
-        "searching": "sports agent position",
-        "city": "Miami",
-        "quote": "It’s not about being the best. It’s about being better than you were yesterday.",
-        "sexuality": "heterosexual",
-        "status": "single",
-        "description": "A crochet lover who enjoys creating handmade garments and accessories. Interested in sports management as well."
-      }
+      "id": 19,
+      "username": "Kim",
+      "age": 25,
+      "hobby": "Crochet",
+      "searching": "sports agent position",
+      "city": "Miami",
+      "quote": "It’s not about being the best. It’s about being better than you were yesterday.",
+      "sexuality": "heterosexual",
+      "status": "single",
+      "description": "A crochet lover who enjoys creating handmade garments and accessories. Interested in sports management as well.",
+      "image": ""
+    }
     
   ]
   

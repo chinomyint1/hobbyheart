@@ -4,260 +4,260 @@
       "username": "Jane",
       "age": 28,
       "hobby": "Reading",
-      "searching": "new creative projects",
+      "searching": "A partner who loves to read or a book club.",
       "city": "Los Angeles",
       "quote": "The best way to predict the future is to create it.",
       "sexuality": "bisexual",
       "status": "single",
       "description": "A passionate reader who loves discovering new stories and ideas. Always looking for new books to dive into.",
-      "image": ""
+      "image": "media/jane.jpg"
     },
     {
       "id": 1,
       "username": "John",
       "age": 35,
       "hobby": "Fitness",
-      "searching": "web developer role",
+      "searching": "A partner who cares about health.",
       "city": "San Francisco",
       "quote": "Life is 10% what happens to us and 90% how we react to it.",
       "sexuality": "heterosexual",
       "status": "in a relationship",
       "description": "A fitness enthusiast who enjoys staying active. Focused on maintaining a healthy lifestyle through regular workouts.",
-      "image": ""
+      "image": "media/john.jpg"
     },
     {
       "id": 2,
       "username": "Lucy",
       "age": 22,
       "hobby": "Yoga",
-      "searching": "art gallery exhibitions",
+      "searching": "Someone to balance out my life.",
       "city": "Chicago",
       "quote": "Creativity is intelligence having fun.",
       "sexuality": "lesbian",
       "status": "single",
       "description": "An aspiring yoga teacher who believes in the power of mindfulness and body alignment. Always seeking balance in life.",
-      "image": ""
+      "image": "media/lucy.jpg"
     },
     {
       "id": 3,
       "username": "Michael",
       "age": 30,
       "hobby": "Dancing",
-      "searching": "remote jobs",
+      "searching": "A partner in dance and in life.",
       "city": "Miami",
       "quote": "Not all those who wander are lost.",
       "sexuality": "heterosexual",
       "status": "married",
       "description": "A dedicated dancer who loves expressing emotions through movement. Passionate about contemporary dance and choreography.",
-      "image": ""
+      "image": "media/michael.jpg"
     },
     {
       "id": 4,
       "username": "Ella",
       "age": 26,
       "hobby": "Cooking",
-      "searching": "fitness coaching opportunities",
+      "searching": "A taste tester who doesn't mind doing the dishes.",
       "city": "Austin",
       "quote": "The body achieves what the mind believes.",
       "sexuality": "pansexual",
       "status": "single",
       "description": "A culinary enthusiast who enjoys experimenting with different cuisines. Always in the kitchen trying new recipes.",
-      "image": ""
+      "image": "media/ella.jpg"
     },
     {
       "id": 5,
       "username": "Liam",
       "age": 32,
       "hobby": "Music",
-      "searching": "data scientist position",
+      "searching": "Somebody to serenade",
       "city": "Seattle",
       "quote": "Success is not the key to happiness. Happiness is the key to success.",
       "sexuality": "heterosexual",
       "status": "engaged",
       "description": "A music lover who spends time listening to various genres and playing guitar. Currently exploring how music and data intersect.",
-      "image": ""
+      "image": "media/liam.jpg"
     },
     {
       "id": 6,
       "username": "Olivia",
       "age": 24,
       "hobby": "Football",
-      "searching": "publishing opportunities",
+      "searching": "Somebody to cheer me on at my football games.",
       "city": "New York",
       "quote": "Write what should not be forgotten.",
       "sexuality": "bisexual",
       "status": "single",
-      "description": "A passionate football fan who enjoys playing the game and analyzing match strategies. Looking for a team to join and grow.",
-      "image": ""
+      "description": "A passionate football fan who enjoys playing the game and analyzing match strategies. Looking for somebody who can be my cheerleader.",
+      "image": "media/olivia.jpg"
     },
     {
       "id": 7,
       "username": "Benjamin",
       "age": 29,
       "hobby": "Traveling",
-      "searching": "chef position",
+      "searching": "A foodie who is up for trying all kinds of the world's cuisines",
       "city": "Los Angeles",
       "quote": "Food is the ingredient that binds us together.",
       "sexuality": "heterosexual",
       "status": "single",
       "description": "A world traveler who enjoys experiencing different cultures through food. Looking to work in an international restaurant.",
-      "image": ""
+      "image": "media/benjamin.jpg"
     },
     {
       "id": 8,
       "username": "Sophia",
       "age": 31,
       "hobby": "Crochet",
-      "searching": "dance instructor job",
+      "searching": "A partner who likes crocheted clothes.",
       "city": "Miami",
       "quote": "Dance first. Think later. It's the natural order.",
       "sexuality": "lesbian",
       "status": "in a relationship",
-      "description": "A crochet enthusiast who loves creating handmade scarves and blankets. Looking for a way to sell her creations.",
-      "image": ""
+      "description": "A crochet enthusiast who loves creating handmade scarves and blankets. Looking for a model to try on my creations.",
+      "image": "media/sophia.jpg"
     },
     {
       "id": 9,
       "username": "Jack",
       "age": 27,
       "hobby": "Drawing",
-      "searching": "mechanical engineering job",
+      "searching": "A girl who doesn't mind being drawn all the time.",
       "city": "Chicago",
       "quote": "Life is like riding a bicycle. To keep your balance, you must keep moving.",
       "sexuality": "heterosexual",
       "status": "single",
       "description": "A passionate artist who loves sketching and creating designs. Interested in bringing art and engineering together in creative ways.",
-      "image": ""
+      "image": "media/jack.jpg"
     },
     {
       "id": 10,
       "username": "Chloe",
       "age": 33,
       "hobby": "Reading",
-      "searching": "sustainable farming opportunities",
+      "searching": "Somebody who likes to live out fantasy scenes.",
       "city": "Portland",
       "quote": "To plant a garden is to believe in tomorrow.",
       "sexuality": "heterosexual",
       "status": "married",
       "description": "A bookworm who loves immersing herself in novels. Also dedicated to environmental sustainability and organic farming.",
-      "image": ""
+      "image": "media/chloe.jpg"
     },
     {
       "id": 11,
       "username": "Ethan",
       "age": 34,
       "hobby": "Fitness",
-      "searching": "documentary photography projects",
+      "searching": "A partner to train with and take on hikes.",
       "city": "San Francisco",
       "quote": "Photography is the story I fail to put into words.",
       "sexuality": "heterosexual",
       "status": "single",
       "description": "A fitness fanatic who loves strength training. Also a photographer interested in capturing real-life moments through his lens.",
-      "image": ""
+      "image": "media/ethan.jpg"
     },
     {
       "id": 12,
       "username": "Isabella",
       "age": 26,
       "hobby": "Yoga",
-      "searching": "bakery job",
+      "searching": "A girl who is flexible in body and mind.",
       "city": "New York",
       "quote": "Baking is love made visible.",
       "sexuality": "lesbian",
       "status": "single",
-      "description": "A yoga practitioner who focuses on mindfulness. She's also passionate about baking and creating delicious desserts.",
-      "image": ""
+      "description": "A yoga practitioner who focuses on mindfulness. I'm also passionate about baking and creating delicious desserts.",
+      "image": "media/isabella.jpg"
     },
     {
       "id": 13,
       "username": "Noah",
       "age": 40,
       "hobby": "Dancing",
-      "searching": "custom furniture business",
+      "searching": "I want somebody to support me.",
       "city": "Austin",
       "quote": "Measure twice, cut once.",
       "sexuality": "heterosexual",
       "status": "married",
-      "description": "A former dancer turned furniture maker. He enjoys combining creativity with craftsmanship in his custom furniture business.",
-      "image": ""
+      "description": "A former dancer turned furniture maker. I enjoy combining creativity with craftsmanship in my custom furniture business.",
+      "image": "media/noah.jpg"
     },
     {
       "id": 14,
       "username": "Emma",
       "age": 29,
       "hobby": "Cooking",
-      "searching": "textile design job",
+      "searching": "Somebody who can appreciate the beauty in food.",
       "city": "Boston",
       "quote": "The only way to do great work is to love what you do.",
       "sexuality": "bisexual",
       "status": "single",
       "description": "A foodie who enjoys cooking and experimenting with flavors. Also a textile designer passionate about creating beautiful fabrics.",
-      "image": ""
+      "image": "media/emma.jpg"
     },
     {
       "id": 15,
       "username": "Mason",
       "age": 23,
       "hobby": "Music",
-      "searching": "skateboard designer",
+      "searching": "A girl who owns headphones, a skateboard and a killer attitude.",
       "city": "Los Angeles",
       "quote": "Skateboarding is a lifestyle, not just a sport.",
       "sexuality": "heterosexual",
       "status": "single",
       "description": "A skateboarder who enjoys designing skateboards and listening to music. Looking to combine these passions into a creative career.",
-      "image": ""
+      "image": "media/mason.jpg"
     },
     {
       "id": 16,
       "username": "Lucas",
       "age": 38,
       "hobby": "Football",
-      "searching": "research opportunities in space science",
+      "searching": "A curious girl with a love for football.",
       "city": "Houston",
       "quote": "The universe is under no obligation to make sense to you.",
       "sexuality": "heterosexual",
       "status": "divorced",
-      "description": "A football fan who loves playing in his local league. He also works as an astrophysicist and seeks new research projects.",
-      "image": ""
+      "description": "A football fan who loves playing in his local league. I also work as an astrophysicist and seek new research projects.",
+      "image": "media/lucas.jpg"
     },
     {
       "id": 17,
       "username": "Mia",
       "age": 27,
       "hobby": "Traveling",
-      "searching": "sports coach position",
+      "searching": "Somebody to explore the waters with me.",
       "city": "Orlando",
       "quote": "The water is your friend. You don't have to fight with water, just share the same spirit as the water.",
       "sexuality": "lesbian",
       "status": "single",
       "description": "A passionate traveler who loves exploring new destinations. Also an experienced sports coach focused on swimming.",
-      "image": ""
+      "image": "media/mia.jpg"
     },
     {
       "id": 18,
       "username": "Oliver",
       "age": 25,
       "hobby": "Crochet",
-      "searching": "sports agent position",
+      "searching": "Combine sport and crochet and you have my heart.",
       "city": "Miami",
       "quote": "It’s not about being the best. It’s about being better than you were yesterday.",
       "sexuality": "heterosexual",
       "status": "single",
       "description": "A crochet lover who enjoys creating handmade garments and accessories. Interested in sports management as well.",
-      "image": ""
+      "image": "media/oliver.jpg"
     },
     {
       "id": 19,
       "username": "Kim",
-      "age": 25,
-      "hobby": "Crochet",
-      "searching": "sports agent position",
-      "city": "Miami",
-      "quote": "It’s not about being the best. It’s about being better than you were yesterday.",
+      "age": 28,
+      "hobby": "Drawing",
+      "searching": "An art-lover like me.",
+      "city": "Los Angeles",
+      "quote": "Art is called art for a reason",
       "sexuality": "heterosexual",
       "status": "single",
-      "description": "A crochet lover who enjoys creating handmade garments and accessories. Interested in sports management as well.",
-      "image": ""
+      "description": "A skilled drawer who likes art for relaxation. Likes a good cup of coffee.",
+      "image": "media/kim.jpg"
     }
     
   ]

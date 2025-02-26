@@ -5,7 +5,7 @@ export const profileTemplate = (profil) => {
     <h1 class="name">${profil.username}, ${profil.age}
     </div>
     <div class="buttons">
-    <i class="fa-solid fa-heart" id="like-btn"></i>
+    <button class="likeBtn" id="${profile.id}"><i class="fa-solid fa-heart" id="like-btn"></i></button>
     <i class="fa-solid fa-crown"></i>
     <i class="fa-solid fa-xmark"></i>
     </div>
@@ -43,9 +43,12 @@ export const likesTemplate = (profile) => {
     return `
     <a href="single.html?id=${profil.id}">
     <img src="${profil.image}" alt="" class="profile-img"></a>
-    <div class="overlay-liked"></div>
+    <div class="overlay-liked">
     <p>${profil.username}</p>
     <p>${profil.age}</p>
     <p>${profil.hobby}</p>
+    </div>
+
+    <button class="removeLikeBtn" id="${profil.id}">Remove from likes</button>
     `;
 }

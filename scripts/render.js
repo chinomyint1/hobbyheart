@@ -60,13 +60,13 @@ export const renderProfiles = () => {
 
   /* Udskrivning */
   
-/*   if (profileContainer) {
+/* if (profileContainer) {
     profil.forEach((profil) => {
       profileContainer.innerHTML = profileTemplate(profil);
     });
 
     /* popover funktionalitet */
-    /* const btnQuickView = document.querySelectorAll(".btn-quickview");
+/* const btnQuickView = document.querySelectorAll(".btn-quickview");
 
     btnQuickView.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -75,6 +75,5 @@ export const renderProfiles = () => {
         popover.innerHTML = superLikesTemplate(foundProfil);
       });
     }); 
-  } 
-  */
-};
+  }  */
+}; 

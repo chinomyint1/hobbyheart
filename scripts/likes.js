@@ -1,7 +1,7 @@
-import { fetch } from "./fetch.js"
+import { fetchProfiles } from "./fetch.js"
 import { likesTemplate } from "./templates.js"
 
-const profiles = await fetch()
+const profiles = await fetchProfiles()
 
 export const likes = () => {
     const likesContainer = document.querySelector('.likes-container')

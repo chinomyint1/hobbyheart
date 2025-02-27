@@ -1,4 +1,5 @@
 import { profileTemplate, superLikesTemplate } from "./templates.js";
+import { fetchProfiles } from "./fetch.js";
 
 const profil = await fetchProfiles();
 

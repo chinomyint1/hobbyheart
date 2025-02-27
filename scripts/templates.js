@@ -57,7 +57,6 @@ export const superLikesTemplate = (profil) => {
     return `
     <video width="320" height="240" controls src="">
     </video>
-    <button class="closeBtn">Close</button>
     <button class="closeBtn">Send message</button>
     `;
 }

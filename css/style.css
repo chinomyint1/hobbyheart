@@ -16,6 +16,14 @@
 .hamburger { 
   display: block; 
 } 
+
+.profile {
+  display: none;
+}
+
+.profile.active {
+  display: flex;
+}
   
 @media screen, (min-width: 992px) { 
 body { 

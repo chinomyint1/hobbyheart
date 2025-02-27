@@ -30,23 +30,23 @@ export const likes = () => {
     }
     likesList()
 
-    const addToLikes = (e) => {
+    /* const addToLikes = (e) => {
         const profileID = e.target.id 
-        const likeToAdd = profile.find((profile) => profile.id == profileID)
+        const likeToAdd = profiles.find((profile) => profile.id == profileID)
 
         const exist = likesArray.find((profile) => profile.id == profileID)
 
         if (!exist) {
             likesArray.push(likeToAdd)
 
-            localStorage.setItem("likeList", JSON.stringify(favoritesArray))
+            localStorage.setItem("likeList", JSON.stringify(likesArray))
         }
-    }
+    } */
 
-    const likeBtn = document.querySelectorAll(".likeBtn")
+   /*  const likeBtn = document.querySelectorAll(".likeBtn")
     likeBtn.forEach((btn) => {
         btn.addEventListener("click", addToLikes)
-    })
+    }) */
 
     function removeFromLikes (e){
         const profileID = e.target.id

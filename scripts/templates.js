@@ -1,5 +1,6 @@
 export const profileTemplate = (profil) => {
     return `
+    <div class="profile">
     <img src="${profil.image}" alt="" class="profile-img">
     <div class="overlay-for-name">
     <h1 class="name">${profil.username}, ${profil.age}
@@ -16,6 +17,7 @@ export const profileTemplate = (profil) => {
     </div>
     <p>${profil.quote}</p>
     <button><a href="single.html?id=${profil.id}">See profile</a></button>
+    </profile>
     `;
 }
 

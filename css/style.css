@@ -1,159 +1,83 @@
-body { 
-
-    font-family: Arial, sans-serif; 
-  
-    margin: 0; 
-  
-  } 
-  
-   
-  
-  header { 
-  
-    background-color: #333; 
-  
-    padding: 10px 20px; 
-  
-  } 
-  
-   
-  
-  .navbar { 
-  
-    display: flex; 
-  
-    justify-content: space-between; 
-  
-    align-items: center; 
-  
-    flex-wrap: wrap; 
-  
-  } 
-  
-  .navbar .logo{ 
-  
-    flex-grow: 1; 
-  
+.nav-links { 
+    display: none; 
+    width: 100%; 
+    flex-direction: column; 
     text-align: center; 
-  
-  } 
-  
-   
-  
-   
-  
-  .navbar .logo a { 
-  
-    color: white; 
-  
-    text-decoration: none; 
-  
-    font-size: 24px; 
-  
-  } 
-  
-  .navbar .logo img { 
-  
-    max-height: 40px; 
-  
-    width: auto; 
-  
-  } 
-  
-   
-  
-  .nav-links { 
-  
-    list-style-type: none; 
-  
-    padding: 0; 
-  
-    margin: 0; 
-  
-    display: none; 
-  
-  } 
+} 
 
-  .nav-links.active { 
+.nav-links.active { 
+  display: flex; 
+} 
   
-        display: flex; 
+.nav-links li { 
+  margin: 10px 0; 
+} 
   
-    } 
+.hamburger { 
+  display: block; 
+} 
   
-   
+@media screen, (min-width: 992px) { 
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0;
+} 
   
-  .nav-links li { 
-  
-    margin-left: 20px; 
-  
-  } 
-  
-   
-  
-  .nav-links a { 
-  
-    color: white; 
-  
-    text-decoration: none; 
-  
-    font-size: 18px; 
-  
-  } 
+header { 
+  background-color: #333; 
+  padding: 10px 20px; 
+} 
 
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  flex-wrap: wrap; 
+} 
+
+.navbar .logo{ 
+  flex-grow: 1; 
+  text-align: center; 
+} 
+
+.navbar .logo a { 
+  color: white; 
+  text-decoration: none; 
+  font-size: 24px; 
+} 
   
-   
+.navbar .logo img { 
+  max-height: 40px; 
+  width: auto; 
+} 
   
-  .hamburger { 
-  
-    display: none; 
-  
-    font-size: 30px; 
-  
-    color: white; 
-  
-    cursor: pointer; 
-  
-  } 
-  
-   
-  
-  @media screen, (max-width: 768px) { 
-  
-    .nav-links { 
-  
-        display: none; 
-  
-        width: 100%; 
-  
-        flex-direction: column; 
-  
-        text-align: center; 
-  
-    } 
-  
-   
-  
-    .nav-links.active { 
-  
-        display: flex; 
-  
-    } 
-  
-   
-  
-    .nav-links li { 
-  
-        margin: 10px 0; 
-  
-    } 
-  
-   
-    .hamburger { 
-  
-        display: block; 
-  
-    } 
-  
-  } 
+.nav-links { 
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+  display: none; 
+} 
+
+.nav-links.active { 
+  display: flex; 
+} 
+
+.nav-links li { 
+  margin-left: 20px; 
+} 
+
+.nav-links a { 
+  color: white; 
+  text-decoration: none; 
+  font-size: 18px; 
+} 
+
+.hamburger { 
+  display: none; 
+  font-size: 30px; 
+  color: white; 
+  cursor: pointer; 
+}
+} 
   
    

@@ -9,10 +9,19 @@ export const filter = () => {
     const renderResult = (result) => {
         profileContainer.innerHTML = ''
         result.forEach(element => {
-            profileContainer.insertAdjacentElement('beforeend', profileTemplate (element))
+            profileContainer.insertAdjacentHTML('beforeend', profileTemplate (element))
             
         })
-    }
 
-    const hobby = document.querySelector
+
+    }
+    const searchInput = () => {
+    const hobby = document.querySelector('#hobby').value
+
+    const findHobby = profiles.filter(profiles.hobby == hobby)
+
+    const result = findHobby
+    renderResult(result)
+    }
 }
+

@@ -54,7 +54,7 @@ body {
   
   .navbar .logo img { 
   
-    max-height: 40px; 
+    max-height: 50px; 
   
     width: auto; 
   
@@ -70,9 +70,15 @@ body {
   
     margin: 0; 
   
-    display: flex; 
+    display: none; 
   
   } 
+
+  .nav-links.active { 
+  
+        display: flex; 
+  
+    } 
   
    
   
@@ -93,6 +99,7 @@ body {
     font-size: 18px; 
   
   } 
+
   
    
   

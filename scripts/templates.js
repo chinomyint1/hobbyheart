@@ -5,9 +5,9 @@ export const profileTemplate = (profil) => {
     <h1 class="name">${profil.username}, ${profil.age}
     </div>
     <div class="buttons">
-    <button class="likeBtn" id="${profile.id}"><i class="fa-solid fa-heart" id="like-btn"></i></button>
-    <i class="fa-solid fa-crown"></i>
-    <i class="fa-solid fa-xmark"></i>
+    <button class="likeBtn" id="${profil.id}"><i class="fa-solid fa-heart" id="like-btn"></i></button>
+    <button class="btn-quickview" id="${profil.id}" popovertarget="myheader"><i class="fa-solid fa-crown"></i></button>
+    <button class="dislikeBtn" id="${profil.id}"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="text">
     <p>${profil.hobby}</p>

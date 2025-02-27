@@ -1,14 +1,14 @@
-import { profileTemplate, singleProfileTemplate, likesTemplate, superLikesTemplate } from "./templates.js";
+import { profileTemplate, superLikesTemplate } from "./templates.js";
 
-const products = await fetchProducts();
+const profil = await fetchProfiles();
 
-export const renderProducts = () => {
+export const renderProfiles = () => {
   const popover = document.querySelector(".quickview-content");
-  const productContainer = document.querySelector(".product-container");
+  const profilContainer = document.querySelector(".product-container");
 
-  if (productContainer) {
-    products.forEach((product) => {
-      productContainer.innerHTML += productTemplate(product);
+  if (profilContainer) {
+    profil.forEach((profil) => {
+      profilContainer.innerHTML += profileTemplate(profil);
     });
 
     /* popover funktionalitet */
@@ -16,9 +16,9 @@ export const renderProducts = () => {
 
     btnQuickView.forEach((btn) => {
       btn.addEventListener("click", () => {
-        const foundProduct = products.find((product) => product.id == btn.id);
-        console.log(foundProduct);
-        popover.innerHTML = quickProductTemplate(foundProduct);
+        const foundProfil = profil.find((profil) => profil.id == btn.id);
+        console.log(foundProfil);
+        popover.innerHTML = superLikesTemplate(foundProfil);
       });
     });
   }

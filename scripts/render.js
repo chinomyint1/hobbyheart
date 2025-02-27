@@ -1,4 +1,4 @@
-import { profileTemplate, singleProfileTemplate, likesTemplate } from "./templates.js";
+import { profileTemplate, singleProfileTemplate, likesTemplate, superLikesTemplate } from "./templates.js";
 
 const products = await fetchProducts();
 

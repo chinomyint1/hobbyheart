@@ -6,9 +6,9 @@ import { likes } from "./likes.js";
 
 
 
-const hamburger = document.getElementById('hamburger'); 
+const hamburger = document.querySelector('hamburger'); 
 
-const navLinks = document.getElementById('nav-links'); 
+const navLinks = document.querySelector('nav-links'); 
 
  
 

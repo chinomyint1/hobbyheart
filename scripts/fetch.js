@@ -1,6 +1,6 @@
 export const fetchProfiles = async () => {
     try {
-        const response = await fetch ("../date/profil.json")
+        const response = await fetch ("../data/profil.json")
         const profiles = await response.json()
         return profiles 
     } catch {

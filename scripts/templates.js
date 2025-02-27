@@ -1,5 +1,6 @@
 export const profileTemplate = (profil) => {
     return `
+    <div class="profile">
     <img src="${profil.image}" alt="" class="profile-img">
     <div class="overlay-for-name">
     <h1 class="name">${profil.username}, ${profil.age}
@@ -16,6 +17,7 @@ export const profileTemplate = (profil) => {
     </div>
     <p>${profil.quote}</p>
     <button><a href="single.html?id=${profil.id}">See profile</a></button>
+    </profile>
     `;
 }
 
@@ -57,7 +59,6 @@ export const superLikesTemplate = (profil) => {
     return `
     <video width="320" height="240" controls src="">
     </video>
-    <button class="closeBtn">Close</button>
     <button class="closeBtn">Send message</button>
     `;
 }

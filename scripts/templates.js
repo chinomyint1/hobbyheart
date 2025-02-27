@@ -39,7 +39,7 @@ export const singleProfileTemplate = (profil) => {
     `;
 }
 
-export const likesTemplate = (profile) => {
+export const likesTemplate = (profil) => {
     return `
     <a href="single.html?id=${profil.id}">
     <img src="${profil.image}" alt="" class="profile-img"></a>
@@ -50,5 +50,14 @@ export const likesTemplate = (profile) => {
     </div>
 
     <button class="removeLikeBtn" id="${profil.id}">Remove from likes</button>
+    `;
+}
+
+export const superLikesTemplate = (profil) => {
+    return `
+    <video width="320" height="240" controls src="">
+    </video>
+    <button class="closeBtn">Close</button>
+    <button class="closeBtn">Send message</button>
     `;
 }

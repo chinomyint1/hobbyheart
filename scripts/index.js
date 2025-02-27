@@ -1,11 +1,3 @@
-const hamburger = document.getElementById('hamburger'); 
+import { menu } from './burgermenu.js';
 
-const navLinks = document.getElementById('nav-links'); 
-
- 
-
-hamburger.addEventListener('click', () => { 
-
-    navLinks.classList.toggle('active'); 
-
-}); 
+menu()

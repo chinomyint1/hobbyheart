@@ -18,7 +18,8 @@ export const filter = () => {
     const searchInput = () => {
     const hobby = document.querySelector('#hobby').value
 
-    const findHobby = profiles.filter(profiles.hobby == hobby)
+    const findHobby = profiles.filter((profile) => profile.hobby == hobby);
+
 
     const result = findHobby
     renderResult(result)

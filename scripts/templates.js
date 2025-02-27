@@ -11,19 +11,19 @@ export const profileTemplate = (profil) => {
     <button class="dislikeBtn" id="${profil.id}"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="text">
-    <p>${profil.hobby}</p>
-    <p>${profil.searching}</p>
-    <p>${profil.city}</p>
+    <p>Likes ${profil.hobby}</p>
+    <p>Looking for ${profil.searching}</p>
+    <p>Living in ${profil.city}</p>
     </div>
-    <p>${profil.quote}</p>
-    <button><a href="single.html?id=${profil.id}">See profile</a></button>
+    <i class="quote">${profil.quote}</i>
+    <button class="see-profile"><a href="/single.html?id=${profil.id}">See profile</a></button>
     </profile>
     `;
 }
 
 export const singleProfileTemplate = (profil) => {
     return `
-    <div class="profile">
+    <div class="single-profile">
     <img src="${profil.image}" alt="" class="profile-img">
     <div class="text">
     <p>${profil.username}</p>
@@ -43,7 +43,7 @@ export const singleProfileTemplate = (profil) => {
 
 export const likesTemplate = (profil) => {
     return `
-    <a href="single.html?id=${profil.id}">
+    <a href="/likes.html?id=${profil.id}">
     <img src="${profil.image}" alt="" class="profile-img"></a>
     <div class="overlay-liked">
     <p>${profil.username}</p>

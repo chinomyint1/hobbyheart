@@ -1,60 +1,58 @@
-import { profileTemplate, superLikesTemplate } from "./templates.js";
+import { profileTemplate } from "./templates.js";
 import { fetchProfiles } from "./fetch.js";
 
-const profil = await fetchProfiles();
+const profiles = await fetchProfiles();
+let currentProfileIndex = 0; // Starter med første profil
 
 export const renderProfiles = () => {
-  const popover = document.querySelector(".quickview-content");
-  const profileContainer = document.querySelector(".profile-container");
+    const profileContainer = document.querySelector(".profile-container");
 
-  /* Swipe */
-    profil.forEach(user => {
-      profileContainer.insertAdjacentHTML('beforeend', profileTemplate (user))
-    })
- 
+    if (profiles.length === 0) return; // Stop hvis der ikke er nogen profiler
 
-  const profilHtml = document.querySelectorAll('.profile')
-  let slidesLength = profilHtml.length - 1
-  let currentimageIndex = 0
+    // Funktion til at vise en specifik profil
+    const showProfile = (index) => {
+        profileContainer.innerHTML = ""; // Ryd containeren
+        profileContainer.insertAdjacentHTML('beforeend', profileTemplate(profiles[index]));
+    };
 
-  const setaActiveSlide = (index) => {
-    profilHtml.forEach( (slide) => {
-      slide.classList.remove('active')
-    })
+    // Funktion til at skifte til næste profil
+    const nextProfile = () => {
+        if (currentProfileIndex < profiles.length - 1) {
+            currentProfileIndex++; // Gå til næste
+            showProfile(currentProfileIndex);
+        } else {
+            // Når alle profiler er set, omdiriger brugeren til likes.html
+            window.location.href = "likes.html";
+        }
+    };
 
-    profilHtml[index].classList.add('active')
-  }
+    // Funktion til at like en profil
+    const likeProfile = () => {
+        let likes = JSON.parse(localStorage.getItem("likes")) || [];
+        const userToAdd = profiles[currentProfileIndex];
 
-  const next = () => {
-    if(currentimageIndex >= slidesLength) {
-      currentimageIndex = 0
-    } else {
-      currentimageIndex += 1
-    }
+        // Undgå dubletter
+        if (!likes.some(user => user.id === userToAdd.id)) {
+            likes.push(userToAdd);
+            localStorage.setItem("likes", JSON.stringify(likes));
+        }
 
-    setaActiveSlide(currentimageIndex)
-  }
+        nextProfile(); // Skift til næste profil
+    };
 
-  const like = () => {
-    let likes = JSON.parse(localStorage.getItem ("likes")) || []
-    const userToAdd = profil.find ((user) => user.id == currentimageIndex) 
-    const exist = likes.find(user => user.id === userToAdd.id)
+    // Start med at vise første profil
+    showProfile(currentProfileIndex);
 
-    if(!exist){
-      likes.push(userToAdd)
-      localStorage.setItem('likes', JSON.stringify(likes))
-    }
+    // Brug event delegation til at fange klik på like/dislike-knapper
+    document.body.addEventListener("click", (e) => {
+        if (e.target.closest(".likeBtn")) {
+            likeProfile();
+        } else if (e.target.closest(".dislikeBtn")) {
+            nextProfile();
+        }
+    });
 
-    next()
-  }
 
-  const likeBtn = document.querySelector(".likeBtn");
-  const dislikeBtn = document.querySelector('.dislikeBtn')
-
-  likeBtn.addEventListener('click', like)
-  dislikeBtn.addEventListener('click', next)
-
-  setaActiveSlide(currentimageIndex)
 
 
 

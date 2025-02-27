@@ -13,7 +13,7 @@ export const likes = () => {
             if (likesArray.length != 0) {
                 likesContainer.innerHTML = ""
 
-                likesArray.forEach((fav) => {
+                likesArray.forEach((likes) => {
                     likesContainer.insertAdjacentHTML("beforeend", likesTemplate(likes))
                 })
             } else {
@@ -24,9 +24,11 @@ export const likes = () => {
         }
         const removeLikeBtn = document.querySelectorAll(".removeLikesBtn")
 
-        removeLikeBtn.forEach((btn) => {
-            btn.addEventListener("click", removeFromLikes)
-        })
+        if(removeLikeBtn.length > 0) {
+            removeLikeBtn.forEach((btn) => {
+                btn.addEventListener("click, removeFromLikes")
+            })
+        }
     }
     likesList()
 

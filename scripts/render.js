@@ -5,11 +5,11 @@ const profil = await fetchProfiles();
 
 export const renderProfiles = () => {
   const popover = document.querySelector(".quickview-content");
-  const profilContainer = document.querySelector(".product-container");
-
-  if (profilContainer) {
+  const profileContainer = document.querySelector(".profile-container");
+console.log("test")
+  if (profileContainer) {
     profil.forEach((profil) => {
-      profilContainer.innerHTML += profileTemplate(profil);
+      profileContainer.innerHTML = profileTemplate(profil);
     });
 
     /* popover funktionalitet */

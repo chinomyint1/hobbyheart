@@ -13,13 +13,15 @@ export const filter = () => {
             
         })
 
-        const hobby = document.querySelector('#hobby').value
-    
-        const findHobby = profiles.filter(profiles.hobby == hobby)
-    
-        const result = findHobby
-        renderResult(result)
-    }
 
+    }
+    const searchInput = () => {
+    const hobby = document.querySelector('#hobby').value
+
+    const findHobby = profiles.filter(profiles.hobby == hobby)
+
+    const result = findHobby
+    renderResult(result)
+    }
 }
 

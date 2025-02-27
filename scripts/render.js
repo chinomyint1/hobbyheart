@@ -8,15 +8,21 @@ export const renderProfiles = () => {
   const profileContainer = document.querySelector(".profile-container");
 
   /* Swipe */
-  let slidesLength = slides.length - 1
+    profil.forEach(user => {
+      profileContainer.insertAdjacentHTML('beforeend', profileTemplate (user))
+    })
+ 
+
+  const profilHtml = document.querySelectorAll('.profile')
+  let slidesLength = profilHtml.length - 1
   let currentimageIndex = 0
 
   const setaActiveSlide = (index) => {
-    slides.forEach( (slide) => {
+    profilHtml.forEach( (slide) => {
       slide.classList.remove('active')
     })
 
-    slides[index].classList.add('active')
+    profilHtml[index].classList.add('active')
   }
 
   const next = () => {
@@ -31,7 +37,7 @@ export const renderProfiles = () => {
 
   const like = () => {
     let likes = JSON.parse(localStorage.getItem ("likes")) || []
-    const userToAdd = users.find ((user) => user.id == currentimageIndex) 
+    const userToAdd = profil.find ((user) => user.id == currentimageIndex) 
     const exist = likes.find(user => user.id === userToAdd.id)
 
     if(!exist){
@@ -42,8 +48,8 @@ export const renderProfiles = () => {
     next()
   }
 
-  const likeBtn = document.querySelector('.like')
-  const dislikeBtn = document.querySelector('.dislike')
+  const likeBtn = document.querySelector(".likeBtn");
+  const dislikeBtn = document.querySelector('.dislikeBtn')
 
   likeBtn.addEventListener('click', like)
   dislikeBtn.addEventListener('click', next)
@@ -53,13 +59,14 @@ export const renderProfiles = () => {
 
 
   /* Udskrivning */
-  if (profileContainer) {
+  
+/*   if (profileContainer) {
     profil.forEach((profil) => {
       profileContainer.innerHTML = profileTemplate(profil);
     });
 
     /* popover funktionalitet */
-    const btnQuickView = document.querySelectorAll(".btn-quickview");
+    /* const btnQuickView = document.querySelectorAll(".btn-quickview");
 
     btnQuickView.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -67,6 +74,7 @@ export const renderProfiles = () => {
         console.log(foundProfil);
         popover.innerHTML = superLikesTemplate(foundProfil);
       });
-    });
-  }
+    }); 
+  } 
+  */
 };

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
+/* Generel styling */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +12,8 @@ body {
   background-color: #C2C2C2;
   overflow-x: hidden;
 } 
+
+/* Header */
   
 header { 
   padding: 10px 20px; 
@@ -68,6 +70,7 @@ header {
   cursor: pointer; 
 }
 
+/* Index styling */
 .profile {
   display: none;
   position: relative;
@@ -177,6 +180,51 @@ a {
   color: black;
 }
 
+/* Single styling */
+.single-profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.single-profile-img {
+  width:50%;
+  height: 75vh;
+  object-fit: cover;
+}
+
+.single-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Likes styling */
+
+.likes-profile-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 100px;
+  position: relative;
+}
+
+.overlay-liked {
+  position: absolute;
+}
+
+.removeLikeBtn {
+  width: 100px;
+}
+
+
+/* Popover styling */
+.popover-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.messageBtn {
+  margin: 0 auto;
+}
   
 @media screen and (max-width: 700px) { 
 .nav-links { 

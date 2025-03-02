@@ -1,28 +1,35 @@
-import { fetchProfiles } from "./fetch.js";
-import { profileTemplate } from "./templates.js";
-
-const profiles = await fetchProfiles()
-
-const profileContainer = document.querySelector('.profile-container')
-
 export const filter = () => {
-    const renderResult = (result) => {
-        profileContainer.innerHTML = ''
-        result.forEach(element => {
-            profileContainer.insertAdjacentHTML('beforeend', profileTemplate (element))
-            
-        })
+  const hobbySelect = document.querySelector("#hobby");
 
+  if (!hobbySelect) {
+    console.error("❌ Fejl: Hobby-dropdown findes ikke!");
+    return;
+  }
 
+  console.log("✅ Filter-funktionalitet tilføjet til likes siden.");
+
+  // Lyt efter ændringer i dropdown-menuen
+  hobbySelect.addEventListener("change", () => {
+    const selectedHobby = hobbySelect.value.toLowerCase();
+    console.log(`🎯 Filtrerer likede profiler efter hobby: ${selectedHobby}`);
+
+    // Find ALLE profiler på siden (tjek at de har class="profile-card")
+    const allProfiles = document.querySelectorAll(".profile-card");
+
+    if (allProfiles.length === 0) {
+      console.warn("⚠️ Ingen profiler at filtrere.");
+      return;
     }
-    const searchInput = () => {
-    const hobby = document.querySelector('#hobby').value
 
-    const findHobby = profiles.filter((profile) => profile.hobby == hobby);
+    // Loop igennem alle profiler og filtrer baseret på hobby
+    allProfiles.forEach((profile) => {
+      const profileHobby = profile.dataset.hobby?.toLowerCase();
 
-
-    const result = findHobby
-    renderResult(result)
-    }
-}
-
+      if (selectedHobby === "all" || profileHobby === selectedHobby) {
+        profile.style.display = "block"; // Vis profilen
+      } else {
+        profile.style.display = "none"; // Skjul profilen
+      }
+    });
+  });
+};

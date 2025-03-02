@@ -37,23 +37,29 @@ export const singleProfileTemplate = (profil) => {
 
     <p>${profil.quote}</p>
     <p>${profil.description}</p>
+    <button class="return"><a href="index.html">Return</a></button>
     </div>
     `;
 }
 
-export const likesTemplate = (profil) => {
-    return `
-    <a href="/likes.html?id=${profil.id}">
-    <img src="${profil.image}" alt="" class="profile-img"></a>
-    <div class="overlay-liked">
-    <p>${profil.username}</p>
-    <p>${profil.age}</p>
-    <p>${profil.hobby}</p>
+export const likesTemplate = (profile) => `
+    <div class="profile-card" data-hobby="${profile.hobby.toLowerCase()}">
+        <a href="single.html?id=${profile.id}" class="likes-profile">
+            <div class="likes-profile-container">
+                <img src="${profile.image}" class="likes-profile-img" />
+                <div class="overlay-liked">
+                    <h2>${profile.username}</h2>
+                    <p>${profile.age}</p>
+                    <p>${profile.hobby}</p>
+                </div>
+            </div>
+        </a>
     </div>
+`;
 
-    <button class="removeLikeBtn" id="${profil.id}">Remove from likes</button>
-    `;
-}
+
+
+
 
 export const superLikesTemplate = (profil) => {
     return `

@@ -199,21 +199,63 @@ a {
 
 /* Likes styling */
 
-.likes-profile-img {
+.likes-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 50px; 
+  padding: 50px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.likes-profile-container {
+  position: relative;
   width: 200px;
   height: 200px;
+  border-radius: 50%;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likes-profile-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 100px;
-  position: relative;
+  border-radius: 50%;
 }
 
 .overlay-liked {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #d9d9d977;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
 }
 
-.removeLikeBtn {
-  width: 100px;
+.overlay-liked h2, .overlay-liked p {
+  margin: 5px 0; 
 }
+
+
+
 
 
 /* Popover styling */

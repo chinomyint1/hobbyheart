@@ -24,25 +24,28 @@ header {
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
-  flex-wrap: wrap; 
+  position: relative;
 } 
 
-.navbar .logo{ 
-  flex-grow: 1; 
-  text-align: center; 
-} 
+.logo {
+  height: 50px;
+  margin: 0 auto;
+}
 
-.navbar .logo a { 
-  color: white; 
-  text-decoration: none; 
-  font-size: 24px; 
-} 
-  
-.navbar .logo img { 
-  max-height: 70px; 
-  width: auto; 
-} 
-  
+.filter-container select {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  width: 50%;
+  height: 100vh;
+  z-index: 1000;
+}
+
 .nav-links { 
   list-style-type: none; 
   padding: 0; 
@@ -221,7 +224,6 @@ a {
 }
 
 /* Likes styling */
-
 .likes-container {
   display: flex;
   flex-wrap: wrap; 
@@ -253,6 +255,7 @@ a {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  
 }
 
 .overlay-liked {
@@ -276,6 +279,7 @@ a {
 .overlay-liked h2, .overlay-liked p {
   margin: 5px 0; 
 }
+
 
 /* Popover styling */
 .quickview-content {
@@ -350,6 +354,63 @@ footer {
   flex-direction: column;
   text-align: center;
   padding: 20px;
+}
+
+/* Likes styling */
+
+.likes-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 50px; 
+  padding: 50px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.likes-profile-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likes-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.overlay-liked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #d9d9d977;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.overlay-liked h2, .overlay-liked p {
+  margin: 5px 0; 
 }
 
 } 

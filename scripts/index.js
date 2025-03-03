@@ -8,7 +8,6 @@ import { menu } from "./burgermenu.js";
 const path = window.location.pathname;
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("✅ DOM er indlæst, kører scripts...");
 
   // Burgermenu skal køre på alle sider
   if (path.includes("likes.html")) {
@@ -17,18 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (path.includes("index.html") || path === "/") {
-    console.log("Forside - kører renderProfiles() & filter()");
     renderProfiles();
-    filter(); // Kører kun filter EFTER DOM er klar
+    filter();
   }
 
   if (path.includes("single.html")) {
-    console.log("Single profil - kører pageProfile()");
     pageProfile();
   }
 
   if (path.includes("likes.html")) {
-    console.log("Likes side - kører likes()");
     likes();
   }
 });

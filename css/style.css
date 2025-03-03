@@ -265,7 +265,7 @@ a {
 /* Likes styling */
 
 .likes-container {
-  flex-grow: 2; 
+  flex-grow: 1; 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -273,6 +273,44 @@ a {
   gap: 50px;
   padding: 50px;
 }
+
+
+.overlay-liked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #80808070;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.overlay-liked h2,
+.overlay-liked p {
+  opacity: 0; /* Hide text initially */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.likes-profile-container:hover .overlay-liked {
+  opacity: 1; /* Show background on hover */
+}
+
+.likes-profile-container:hover .overlay-liked h2,
+.likes-profile-container:hover .overlay-liked p {
+  opacity: 1; /* Show text on hover */
+}
+
+
 
 
 .profile-card {
@@ -301,23 +339,6 @@ a {
   
 }
 
-.overlay-liked {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #80808070;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  font-size: 14px;
-  padding: 10px;
-}
 
 
 /* Popover styling */

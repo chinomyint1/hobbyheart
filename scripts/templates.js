@@ -47,16 +47,16 @@ export const singleProfileTemplate = (profil) => {
 
 export const likesTemplate = (profile) => `
     <div class="profile-card" data-hobby="${profile.hobby}">
-        <a href="single.html?id=${profile.id}" class="likes-profile">
-            <div class="likes-profile-container">
-                <img src="${profile.image}" class="likes-profile-img" />
-                <div class="overlay-liked">
-                    <h2>${profile.username}</h2>
-                    <p>${profile.age}</p>
-                    <p>${profile.hobby}</p>
-                </div>
-            </div>
-        </a>
+    <a href="single.html?id=${profile.id}" class="likes-profile">
+    <div class="likes-profile-container">
+    <img src="${profile.image}" class="likes-profile-img" />
+    <div class="overlay-liked">
+    <h2>${profile.username}</h2>
+    <p>${profile.age}</p>
+    <p>${profile.hobby}</p>
+    </div>
+    </div>
+    </a>
     </div>
 `;
 

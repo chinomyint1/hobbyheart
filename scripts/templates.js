@@ -23,21 +23,20 @@ export const profileTemplate = (profil) => {
 
 export const singleProfileTemplate = (profil) => {
     return `
-    <div class="single-profile">
-    <img src="${profil.image}" alt="" class="profile-img">
-    <div class="text">
-    <p>${profil.username}</p>
-    <p>${profil.age}</p>
-    <p>${profil.hobby}</p>
-    <p>${profil.searching}</p>
-    <p>${profil.city}</p>
-    <p>${profil.sexuality}</p>
-    <p>${profil.status}</p>
-    </div>
-
-    <p>${profil.quote}</p>
-    <p>${profil.description}</p>
+    <div class="single-profile-card">
+    <img src="${profil.image}" alt="" class="single-profile-img">
+    <div class="single-text">
+    <h2 class="single-name">${profil.username}, ${profil.age}</h2>
+    <p>Likes ${profil.hobby}</p>
+    <p>Looking for ${profil.searching}</p>
+    <p>Lives in ${profil.city}</p>
+    <p>Sexuality is ${profil.sexuality}</p>
+    <p>Relationship status is ${profil.status}</p>
+    <i>${profil.quote}</i>
+    <p>Who I am 
+    <br>${profil.description}</p>
     <button class="return"><a href="index.html">Return</a></button>
+    </div>
     </div>
     `;
 }
@@ -65,6 +64,6 @@ export const superLikesTemplate = (profil) => {
     return `
     <video width="320" height="240" controls src="">
     </video>
-    <button class="closeBtn">Send message</button>
+    <button class="messageBtn">Send message</button>
     `;
 }

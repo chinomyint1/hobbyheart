@@ -17,6 +17,7 @@ body {
   
 header { 
   padding: 10px 20px; 
+  background-color: #D9D9D9;
 } 
 
 .navbar { 
@@ -181,20 +182,42 @@ a {
 }
 
 /* Single styling */
-.single-profile {
+.single-profile-card {
   display: flex;
-  flex-direction: row;
 }
 
 .single-profile-img {
-  width:50%;
-  height: 75vh;
+  width:50vw;
+  height: 100vh;
   object-fit: cover;
 }
 
 .single-text {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  margin-left: 10px;
+
+}
+
+.single-name {
+  font-family: 'inter';
+  font-weight: 400;
+}
+
+.return {
+  width: 100px;
+  display: block; 
+  margin: 0 auto; 
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+}
+
+.return:hover {
+  background-color:  #80ed99;
 }
 
 /* Likes styling */
@@ -254,18 +277,32 @@ a {
   margin: 5px 0; 
 }
 
-
-
-
-
 /* Popover styling */
-.popover-container {
+.quickview-content {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .messageBtn {
   margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #D9D9D9;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  font-size: 30px;
+  color: #5fb874;
+}
+
+.fa-heart-circle-plus {
+  color: #5fb874;
 }
   
 @media screen and (max-width: 700px) { 

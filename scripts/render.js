@@ -1,8 +1,8 @@
 import { profileTemplate, superLikesTemplate } from "./templates.js";
 import { fetchProfiles } from "./fetch.js";
 
-let currentProfileIndex = 0; // Gør variablen global
-let profil = []; // Gemmer profilerne globalt
+let currentProfileIndex = 0; 
+let profil = []; 
 
 export const renderProfiles = async () => {
     const profileContainer = document.querySelector(".profile-container");

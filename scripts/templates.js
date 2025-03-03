@@ -13,7 +13,7 @@ export const profileTemplate = (profil) => {
     <div class="text">
     <p>Likes ${profil.hobby}</p>
     <p>Looking for ${profil.searching}</p>
-    <p>Living in ${profil.city}</p>
+    <p>Lives in ${profil.city}</p>
     </div>
     <i class="quote">${profil.quote}</i>
     <button class="see-profile"><a href="/single.html?id=${profil.id}">See profile</a></button>

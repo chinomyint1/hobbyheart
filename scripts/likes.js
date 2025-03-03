@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
 
   if (path.includes("likes.html")) {
-    console.log("✅ Likes side - kører filter()");
     filter();
   }
 });
@@ -15,7 +14,6 @@ export const likes = () => {
     const likesContainer = document.querySelector(".likes-container");
 
     if (!likesContainer) {
-        console.error("❌ Fejl: .likes-container findes ikke!");
         return;
     }
 
@@ -27,7 +25,6 @@ export const likes = () => {
     }
 
     renderAllLikedProfiles(likedProfiles);
-    console.log("✅ Likes side indlæst med", likedProfiles.length, "profiler.");
 };
 
 // Funktion til at vise alle likede profiler
@@ -60,23 +57,4 @@ const addEventListeners = () => {
             removeLike(profileId);
         });
     });
-
-
-    /* const addToLikes = (e) => {
-        const profileID = e.target.id 
-        const likeToAdd = profiles.find((profile) => profile.id == profileID)
-
-        const exist = likesArray.find((profile) => profile.id == profileID)
-
-        if (!exist) {
-            likesArray.push(likeToAdd)
-
-            localStorage.setItem("likeList", JSON.stringify(likesArray))
-        }
-    } */
-
-   /*  const likeBtn = document.querySelectorAll(".likeBtn")
-    likeBtn.forEach((btn) => {
-        btn.addEventListener("click", addToLikes)
-    }) */
 }

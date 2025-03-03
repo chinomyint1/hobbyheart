@@ -39,6 +39,7 @@ header {
 } 
   
 .navbar .logo img { 
+  display: block;
   max-height: 70px; 
   width: auto; 
 } 

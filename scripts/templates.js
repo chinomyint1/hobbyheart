@@ -22,8 +22,9 @@ export const profileTemplate = (profil) => {
 }
 
 export const singleProfileTemplate = (profil) => {
-    return `
+  return `
     <div class="single-profile-card">
+    <div class="single-profile-top">
     <img src="${profil.image}" alt="" class="single-profile-img">
     <div class="single-text">
     <h2 class="single-name">${profil.username}, ${profil.age}</h2>
@@ -32,17 +33,20 @@ export const singleProfileTemplate = (profil) => {
     <p>Lives in ${profil.city}</p>
     <p>Sexuality is ${profil.sexuality}</p>
     <p>Relationship status is ${profil.status}</p>
+    </div>
+    </div>
+    <div class="single-profile-bottom">
     <i>${profil.quote}</i>
-    <p>Who I am 
-    <br>${profil.description}</p>
+    <p>Who I am<br>${profil.description}</p>
     <button class="return"><a href="index.html">Return</a></button>
     </div>
     </div>
     `;
-}
+};
+
 
 export const likesTemplate = (profile) => `
-    <div class="profile-card" data-hobby="${profile.hobby.toLowerCase()}">
+    <div class="profile-card" data-hobby="${profile.hobby}">
         <a href="single.html?id=${profile.id}" class="likes-profile">
             <div class="likes-profile-container">
                 <img src="${profile.image}" class="likes-profile-img" />
@@ -62,7 +66,7 @@ export const likesTemplate = (profile) => `
 
 export const superLikesTemplate = (profil) => {
     return `
-    <video width="320" height="240" controls src="">
+    <video controls src="media/video.mp4" class="video">
     </video>
     <button class="messageBtn">Send message</button>
     `;

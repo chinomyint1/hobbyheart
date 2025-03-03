@@ -1,4 +1,5 @@
 import { fetchProfiles } from "./fetch.js"; // Sørg for at fetch.js er i samme mappe!
+import { singleProfileTemplate } from "./templates.js";
 
 export const pageProfile = async () => {
   console.log("✅ Kører pageProfile()");

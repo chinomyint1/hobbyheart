@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ DOM er indlæst, kører scripts...");
 
   // Burgermenu skal køre på alle sider
-  menu();
+  if (path.includes("likes.html")) {
+
+    menu();
+  }
 
   if (path.includes("index.html") || path === "/") {
     console.log("Forside - kører renderProfiles() & filter()");

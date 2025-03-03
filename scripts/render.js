@@ -1,4 +1,4 @@
-import { profileTemplate } from "./templates.js";
+import { profileTemplate, superLikesTemplate } from "./templates.js";
 import { fetchProfiles } from "./fetch.js";
 
 let currentProfileIndex = 0; // Gør variablen global
@@ -73,13 +73,11 @@ export const renderProfiles = async () => {
 
   /* Udskrivning */
 
-  /*   if (profileContainer) {
-    profil.forEach((profil) => {
-      profileContainer.innerHTML = profileTemplate(profil);
-    });
+  if (profileContainer) {
 
     /* popover funktionalitet */
-  /* const btnQuickView = document.querySelectorAll(".btn-quickview");
+  const btnQuickView = document.querySelectorAll(".btn-quickview");
+  const popover = document.querySelector(".quickview-content")
 
     btnQuickView.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -89,5 +87,5 @@ export const renderProfiles = async () => {
       });
     }); 
   } 
-  */
+  
 };

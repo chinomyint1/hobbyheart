@@ -28,26 +28,46 @@ header {
 } 
 
 .logo {
-  height: 50px;
+  height: 60px;
   margin: 0 auto;
+}
+
+.hamburger { 
+  display: block; 
+  font-size: 30px; 
+  color: white; 
+  cursor: pointer; 
 }
 
 .filter-container select {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
   position: absolute;
-  top: 50px;
-  right: 0;
+  top: 70px;
+  right: -20px;
   background-color: #333;
   color: #fff;
-  width: 50%;
+  width: 25%;
   height: 100vh;
   z-index: 1000;
 }
 
+#hobby {
+  overflow-y: auto;
+}
 
-=======
+#hobby option {
+  text-align: center;
+  padding: 10px;
+}
+
+
+option:hover {
+  color: #80ed99;
+}
+
 .navbar .logo a { 
   color: white; 
   text-decoration: none; 
@@ -60,7 +80,6 @@ header {
   width: auto; 
 } 
   
-
 .nav-links { 
   list-style-type: none; 
   padding: 0; 
@@ -72,22 +91,6 @@ header {
   display: flex; 
 } 
 
-.nav-links li { 
-  margin-left: 20px; 
-} 
-
-.nav-links a { 
-  color: white; 
-  text-decoration: none; 
-  font-size: 18px; 
-} 
-
-.hamburger { 
-  display: block; 
-  font-size: 30px; 
-  color: white; 
-  cursor: pointer; 
-}
 
 /* Index styling */
 .profile {
@@ -188,6 +191,7 @@ header {
   margin-bottom: 20px;
   padding: 10px;
   border: none;
+  font-size: 16px;
 }
 
 .see-profile:hover {
@@ -215,7 +219,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 10px;
+  padding: 20px;
 
 }
 
@@ -232,6 +236,7 @@ a {
   margin-bottom: 20px;
   padding: 10px;
   border: none;
+  font-size: 16px;
 }
 
 .return:hover {
@@ -280,7 +285,7 @@ a {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #d9d9d977;
+  background-color: #80808070;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,10 +294,6 @@ a {
   color: white;
   font-size: 14px;
   padding: 10px;
-}
-
-.overlay-liked h2, .overlay-liked p {
-  margin: 5px 0; 
 }
 
 
@@ -306,11 +307,18 @@ a {
 .messageBtn {
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
+  width: 100%; 
+  margin: 0 auto; 
+  padding: 10px;
+  border: none;
+}
+
+.messageBtn:hover {
+  background-color:  #80ed99;
 }
 
 /* Footer */
-
 footer {
   background-color: #D9D9D9;
   display: flex;
@@ -321,6 +329,10 @@ footer {
 }
 
 .fa-heart-circle-plus {
+  color: #5fb874;
+}
+
+.fa-house {
   color: #5fb874;
 }
   
@@ -343,6 +355,13 @@ footer {
 .hamburger { 
   display: block; 
 } 
+
+.logo {
+  height: 50px;
+  margin: 0 auto;
+}
+
+/* Index styling */
 
 .buttons {
   position: absolute;

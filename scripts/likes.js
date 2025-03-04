@@ -44,6 +44,5 @@ const renderAllLikedProfiles = (profiles) => {
         likesContainer.insertAdjacentHTML("beforeend", likesTemplate(profile));
     });
 
-    addEventListeners();
 };
 

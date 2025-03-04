@@ -1,40 +1,38 @@
-import { fetchProfiles } from "./fetch.js"; // Sørg for at fetch.js er i samme mappe!
+/* Importerer funktioner */
+import { fetchProfiles } from "./fetch.js"; 
 import { singleProfileTemplate } from "./templates.js";
 
 export const pageProfile = async () => {
-  console.log("✅ Kører pageProfile()");
 
+  /* Opretter variabel */
   const singleProfile = document.querySelector(".single-profile");
   if (!singleProfile) {
-    console.error("❌ Fejl: .single-profile findes ikke!");
-    return;
+    return; /* går tilbage hvis single-profile ikke findes */
   }
 
+  /* får fat i id'et */
   const profileID = new URLSearchParams(location.search).get("id");
-  console.log("🔍 Hentet profil ID fra URL:", profileID);
 
   if (!profileID) {
-    singleProfile.innerHTML = `<p>Fejl: Ingen profil fundet!</p>`;
-    return;
+    singleProfile.innerHTML = `<p>Error: No profile found</p>`;
+    return; /* giver fejlbesked hvis ikke profileID findes */
   }
 
   try {
     const profiles = await fetchProfiles();
-    console.log("✅ Profiler hentet:", profiles);
 
-    const foundProfile = profiles.find((profile) => profile.id == profileID);
-    console.log("🔍 Fundet profil:", foundProfile);
+    const foundProfile = profiles.find((profile) => profile.id == profileID); /* Sikrer sig det er det rigtige ID */
+
 
     if (!foundProfile) {
-      singleProfile.innerHTML = `<p>Fejl: Profil ikke fundet!</p>`;
-      return;
+      singleProfile.innerHTML = `<p>Error: Profile not found</p>`;
+      return; /* Giver fejlbesked hvis ikke foundProfile kan findes */
     }
 
-    singleProfile.innerHTML = singleProfileTemplate(foundProfile);
-    console.log("✅ Profil indsat i HTML");
+    singleProfile.innerHTML = singleProfileTemplate(foundProfile); /* Udskriver singleProfileTemplate */
   } catch (error) {
-    console.error("❌ Fejl ved hentning af profiler:", error);
-    singleProfile.innerHTML = `<p>Fejl: Kunne ikke hente profiler.</p>`;
+    console.error("error collecting profiles", error);
+    singleProfile.innerHTML = `<p>Error: Could not collect profiles</p>`;
   }
 };
 

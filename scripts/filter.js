@@ -1,19 +1,21 @@
+/* Eksporterer vores filter */
+
 export const filter = () => {
   const hobbySelect = document.querySelector("#hobby");
 
   if (!hobbySelect) {
-    return;
+    return; /* Hvis ikke #hobby eksisterer går den tilbage */
   }
 
   // Lyt efter ændringer i dropdown-menuen
   hobbySelect.addEventListener("change", () => {
     const selectedHobby = hobbySelect.value.toLowerCase();
 
-    // Find ALLE profiler på siden (tjek at de har class="profile-card")
+    // Find alle profiler på siden (tjek at de har class="profile-card")
     const allProfiles = document.querySelectorAll(".profile-card");
 
     if (allProfiles.length === 0) {
-      return;
+      return; /* hvis ikke profile-card findes går den tilbage */
     }
 
     // Loop igennem alle profiler og filtrer baseret på hobby

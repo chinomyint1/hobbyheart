@@ -1,3 +1,5 @@
+/* Eksporterer templates */
+
 export const profileTemplate = (profil) => {
     return `
     <div class="profile">

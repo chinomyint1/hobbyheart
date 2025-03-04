@@ -1,3 +1,5 @@
+/* Eksporterer fetchProfiles, som kalder på vores data */
+
 export const fetchProfiles = async () => {
     try {
       const response = await fetch("../data/profil.json");

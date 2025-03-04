@@ -210,42 +210,57 @@ a {
 /* Single styling */
 .single-profile-card {
   display: flex;
+  flex-direction: column; /* Ensures a vertical layout */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.single-top {
+  display: flex;
+  width: 100%;
+  align-items: flex-start; /* Ensures proper alignment */
 }
 
 .single-profile-img {
-  width:50vw;
+  width: 50vw;
   height: 100vh;
   object-fit: cover;
 }
 
 .single-text {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-
+  width: 50%; 
 }
 
-.single-name {
-  font-family: 'inter';
-  font-weight: 400;
+.single-bottom {
+  width: 100%; 
+  margin-left: 10px;
+}
+
+.desc {
+  margin-top: 10px;
 }
 
 .return {
   width: 100px;
   display: block; 
-  margin: 0 auto; 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto; 
   padding: 10px;
   border: none;
   font-size: 16px;
+  background-color: #fff;
+  text-align: center;
 }
 
 .return:hover {
-  background-color:  #80ed99;
+  background-color: #80ed99;
 }
+
+
 
 /* Likes styling */
 .likes-container {

@@ -24,24 +24,29 @@ export const profileTemplate = (profil) => {
 }
 
 export const singleProfileTemplate = (profil) => {
-    return `
+  return `
     <div class="single-profile-card">
-    <img src="${profil.image}" alt="" class="single-profile-img">
-    <div class="single-text">
-    <h2 class="single-name">${profil.username}, ${profil.age}</h2>
-    <p>Likes ${profil.hobby}</p>
-    <p>Looking for ${profil.searching}</p>
-    <p>Lives in ${profil.city}</p>
-    <p>Sexuality is ${profil.sexuality}</p>
-    <p>Relationship status is ${profil.status}</p>
-    <i>${profil.quote}</i>
-    <p>Who I am 
-    <br>${profil.description}</p>
-    <button class="return"><a href="index.html">Return</a></button>
-    </div>
+        <div class="single-top">
+            <img src="${profil.image}" alt="" class="single-profile-img">
+            <div class="single-text">
+                <h2 class="single-name">${profil.username}, ${profil.age}</h2>
+                <p>Likes ${profil.hobby}</p>
+                <p>Looking for ${profil.searching}</p>
+                <p>Lives in ${profil.city}</p>
+                <p>Sexuality is ${profil.sexuality}</p>
+                <p>Relationship status is ${profil.status}</p>
+            </div>
+        </div>
+        <div class="single-bottom">
+            <i">${profil.quote}</i>
+            <p class="desc"><b>Who I am</b><br>${profil.description}</p>
+        </div>
+        <button class="return"><a href="index.html">Return</a></button>
     </div>
     `;
-}
+};
+
+
 
 export const likesTemplate = (profile) => `
     <div class="profile-card" data-hobby="${profile.hobby.toLowerCase()}">

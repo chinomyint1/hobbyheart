@@ -1,4 +1,3 @@
-/* Eksporterer template der vises på index.html */
 export const profileTemplate = (profil) => {
     return `
     <div class="profile">
@@ -17,12 +16,11 @@ export const profileTemplate = (profil) => {
     <p>Lives in ${profil.city}</p>
     </div>
     <i class="quote">${profil.quote}</i>
-    <a href="/single.html?id=${profil.id}"><button class="see-profile">See profile</button></a>
+    <button class="see-profile"><a href="/single.html?id=${profil.id}">See profile</a></button>
     </profile>
     `;
 }
 
-/* Eksporterer template der vises på single.html */
 export const singleProfileTemplate = (profil) => {
   return `
     <div class="single-profile-card">
@@ -40,13 +38,13 @@ export const singleProfileTemplate = (profil) => {
     <div class="single-profile-bottom">
     <i>${profil.quote}</i>
     <p>Who I am<br>${profil.description}</p>
-    <a href="index.html"><button class="return">Return</button></a>
+    <button class="return"><a href="index.html">Return</a></button>
     </div>
     </div>
     `;
 };
 
-/* Eksporterer template der vises på likes.html */
+
 export const likesTemplate = (profile) => `
     <div class="profile-card" data-hobby="${profile.hobby}">
     <a href="single.html?id=${profile.id}" class="likes-profile">
@@ -62,7 +60,10 @@ export const likesTemplate = (profile) => `
     </div>
 `;
 
-/* Eksporter template der vises ved tryk på superLike */
+
+
+
+
 export const superLikesTemplate = (profil) => {
     return `
     <video controls src="media/video.mp4" class="video">

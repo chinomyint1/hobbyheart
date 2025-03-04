@@ -16,16 +16,16 @@ body {
   font-family: Arial, sans-serif; 
   margin: 0;
   background-color: #C2C2C2;
-  overflow-x: hidden; /* Sørger for den ikke kan scrolle vandret */
+  overflow-x: hidden;
 } 
 
 /* Header */
+  
 header { 
   padding: 10px 20px; 
   background-color: #D9D9D9;
 } 
 
-/* Positionere elementerne i navbaren */
 .navbar { 
   display: flex; 
   justify-content: space-between; 
@@ -33,13 +33,11 @@ header {
   position: relative;
 } 
 
-/* Stiller logoet i midten */
 .logo {
   height: 60px;
   margin: 0 auto;
 }
 
-/* Sørger for menuen ikke vises før man trykker på burgermenuen */
 .hamburger { 
   display: block; 
   font-size: 30px; 
@@ -47,7 +45,6 @@ header {
   cursor: pointer; 
 }
 
-/* Styler vores dropdown menu */
 .filter-container select {
   display: flex;
   justify-content: center;
@@ -63,18 +60,16 @@ header {
   z-index: 1000;
 }
 
-/* Sørger for der ikke er en scrollbar i dropdown */
 #hobby {
   overflow-y: auto;
 }
 
-/* Placerer hobbyerne centreret */
 #hobby option {
   text-align: center;
   padding: 10px;
 }
 
-/* Hover når man fører musen over en option */
+
 option:hover {
   color: #80ed99;
 }
@@ -104,8 +99,6 @@ option:hover {
 
 
 /* Index styling */
-
-/* Placerer profile i flexbox */
 .profile {
   display: none;
   position: relative;
@@ -117,14 +110,12 @@ option:hover {
   display: flex;
 }
 
-/* Styling af billedet */
 .profile-img {
   width: 100%;
   height: 100vh;
-  object-fit: cover; /* Sørger for det ikke strækkes */
+  object-fit: cover;
 }
 
-/* Gennemsigtig baggrund for at gøre navn letlæslig */
 .overlay-for-name {
   position: absolute;
   top: 40%;
@@ -134,7 +125,6 @@ option:hover {
   padding: 20px;
 }
 
-/* Styling af navn */
 .name {
   text-align: center;
   color: #C84E4E;
@@ -142,7 +132,6 @@ option:hover {
   font-weight: 900;
 }
 
-/* Placering af likes, dislike og superlike knapper */
 .buttons {
   position: absolute;
   top: 65%;
@@ -156,17 +145,17 @@ option:hover {
   border: none;
   color: #80ed99;
   font-size: 75px;
-  transition: all .5s ease-in-out; /* Sørger for en smooth transition */
+  transition: all .5s ease-in-out;
 }
 
 .likeBtn:hover {
-  transform: scale(1.5); /* Gør den en anelse større ved hover */
+  transform: scale(1.5);
 }
 
 .btn-quickview {
   background-color: transparent;
   border: none;
-  margin-top: 25px; /* Sørger for den er lidt længere nede en de andre */
+  margin-top: 25px;
   color: #ffd670;
   font-size: 75px;
   transition: all .5s ease-in-out;
@@ -221,25 +210,21 @@ a {
 }
 
 /* Single styling */
-
-/* Sørger for flexbox */
 .single-profile-card {
   display: flex;
   flex-direction: column;  
   margin: auto;
 }
 
-/* Det øverste tekst */
 .single-profile-top {
   display: flex; 
   align-items: flex-start; 
 }
 
-/* Billedestyling */
 .single-profile-img {
   width: 40vw;
   height: auto;
-  object-fit: cover; /* Sørger for det ikke strækkes */
+  object-fit: cover;
 }
 
 .single-text {
@@ -251,13 +236,11 @@ a {
   margin-top: 20px;
 }
 
-/* Det nederste tekst */
 .single-profile-bottom {
   margin-top: 20px;
   margin-left: 10px; 
 }
 
-/* Sørger for at komme tilbage til index.html */
 .return {
   width: 100px;
   display: block; 
@@ -281,7 +264,6 @@ a {
 
 /* Likes styling */
 
-/* Sørger for flexbox til alle likes*/
 .likes-container {
   flex-grow: 1; 
   display: flex;
@@ -292,7 +274,7 @@ a {
   padding: 50px;
 }
 
-/* En svag baggrund bagved tekst */
+
 .overlay-liked {
   position: absolute;
   top: 0;
@@ -309,26 +291,26 @@ a {
   color: white;
   font-size: 14px;
   padding: 10px;
-  opacity: 0; 
-  transition: opacity 0.3s ease-in-out; 
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
 }
 
 .overlay-liked h2,
 .overlay-liked p {
-  opacity: 0; 
+  opacity: 0; /* Hide text initially */
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Sørger for tekst og overlay kun vises ved hover */
 .likes-profile-container:hover .overlay-liked {
-  opacity: 1; 
+  opacity: 1; /* Show background on hover */
 }
 
-/* Sørger for tekst og overlay kun vises ved hover */
 .likes-profile-container:hover .overlay-liked h2,
 .likes-profile-container:hover .overlay-liked p {
-  opacity: 1; 
+  opacity: 1; /* Show text on hover */
 }
+
+
 
 
 .profile-card {
@@ -338,7 +320,6 @@ a {
   text-align: center;
 }
 
-/* Laver flexbox */
 .likes-profile-container {
   position: relative;
   width: 200px;
@@ -350,7 +331,6 @@ a {
   align-items: center;
 }
 
-/* Styling af likes profile billede */
 .likes-profile-img {
   width: 100%;
   height: 100%;
@@ -359,9 +339,9 @@ a {
   
 }
 
-/* Popover styling */
 
-/* Sørger for det placeres centreret */
+
+/* Popover styling */
 .quickview-content {
   display: flex;
   flex-direction: column;
@@ -372,13 +352,11 @@ a {
   z-index: 1101;
 }
 
-/* Styling til video container */
 .video {
   width: 600px;
   height: 400px;
 }
 
-/* Styling til besked knappen */
 .messageBtn {
   margin: 0 auto;
   margin-top: 10px;
@@ -395,7 +373,6 @@ a {
 
 /* Footer */
 
-/* Footer styling */
 footer {
   background-color: #D9D9D9;
   display: flex;
@@ -412,13 +389,13 @@ footer {
   color: #5fb874;
 }
 
-
-/* Mobil styling */
+.fa-house {
+  color: #5fb874;
+}
+  
 @media screen and (max-width: 700px) { 
-
-/* Navbaren der sørger for alt sidder som det skal */
 .navbar {
-  width: 100%;
+  width: 90%;
   max-width: 100%;
   display: flex;
   flex-direction: row;
@@ -426,28 +403,33 @@ footer {
   justify-content: space-between;
   padding: 10px 15px;
   box-sizing: border-box;
-}
- 
-/* Styling til dropdown */
-.filter-container select {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  position: absolute;
-  top: 90px;
-  right: -50px;
-  background-color: #333;
-  color: #fff;
-  width: 75%;
-  height: 100vh;
-  z-index: 1000;
-}
+  }
 
+.nav-links { 
+  display: none; 
+  width: 100%; 
+  flex-direction: column; 
+  text-align: center; 
+} 
+
+.nav-links.active { 
+  display: flex; 
+} 
+  
+.nav-links li { 
+  margin: 10px 0; 
+} 
+  
+.hamburger { 
+  display: block; 
+} 
+
+.logo {
+  height: 50px;
+  margin: 0 auto;
+}
 
 /* Index styling */
-
-/* Knappernes placering på index */
 .buttons {
   position: absolute;
   top: 57%;
@@ -477,7 +459,6 @@ footer {
 
 /* Likes styling */
 
-/* Flex-box */
 .likes-container {
   display: flex;
   flex-wrap: wrap; 
@@ -486,7 +467,6 @@ footer {
   padding: 50px;
 }
 
-/* Flex-box */
 .profile-card {
   display: flex;
   flex-direction: column;
@@ -519,7 +499,7 @@ footer {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #80808070;
+  background-color: #d9d9d977;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -528,12 +508,10 @@ footer {
   color: white;
   font-size: 14px;
   padding: 10px;
-  opacity: 1;
 }
 
 .overlay-liked h2, .overlay-liked p {
   margin: 5px 0; 
-  opacity: 1;
 }
 
 .quickview-content {
@@ -546,9 +524,6 @@ footer {
   height: 200px;
 }
 
-.return:hover, .see-profile:hover {
-  background-color: #fff;
-}
 /* Single styling */
 
 .single-profile {
@@ -573,7 +548,7 @@ footer {
 }
 
 footer {
-  width: 100%;
+  width: 90%;
 }
 
 } 

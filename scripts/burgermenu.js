@@ -1,13 +1,15 @@
-const hamburger = document.querySelector('#hamburger'); 
+/* Variabler oprettes */
+const hamburger = document.querySelector("#hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-const navLinks = document.querySelector('.nav-links'); 
-
-
- export function menu() {
-    hamburger.addEventListener('click', () => { 
-
-   navLinks.classList.toggle('active'); 
-   }); 
-
-} 
+/* Menu function eksporteres */
+export function menu() {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  }); /* Click event til burgermenuen */
+  
+  navLinks.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  }); /* Sørger for man kan lukke den ved at klikke udenfor dropdown */
+}
 

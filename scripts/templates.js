@@ -1,3 +1,4 @@
+/* Eksporterer template der vises på index.html */
 export const profileTemplate = (profil) => {
     return `
     <div class="profile">
@@ -16,14 +17,16 @@ export const profileTemplate = (profil) => {
     <p>Lives in ${profil.city}</p>
     </div>
     <i class="quote">${profil.quote}</i>
-    <button class="see-profile"><a href="/single.html?id=${profil.id}">See profile</a></button>
+    <a href="/single.html?id=${profil.id}"><button class="see-profile">See profile</button></a>
     </profile>
     `;
 }
 
+/* Eksporterer template der vises på single.html */
 export const singleProfileTemplate = (profil) => {
-    return `
+  return `
     <div class="single-profile-card">
+    <div class="single-profile-top">
     <img src="${profil.image}" alt="" class="single-profile-img">
     <div class="single-text">
     <h2 class="single-name">${profil.username}, ${profil.age}</h2>
@@ -32,37 +35,37 @@ export const singleProfileTemplate = (profil) => {
     <p>Lives in ${profil.city}</p>
     <p>Sexuality is ${profil.sexuality}</p>
     <p>Relationship status is ${profil.status}</p>
+    </div>
+    </div>
+    <div class="single-profile-bottom">
     <i>${profil.quote}</i>
-    <p>Who I am 
-    <br>${profil.description}</p>
-    <button class="return"><a href="index.html">Return</a></button>
+    <p>Who I am<br>${profil.description}</p>
+    <a href="index.html"><button class="return">Return</button></a>
     </div>
     </div>
     `;
-}
+};
 
+/* Eksporterer template der vises på likes.html */
 export const likesTemplate = (profile) => `
-    <div class="profile-card" data-hobby="${profile.hobby.toLowerCase()}">
-        <a href="single.html?id=${profile.id}" class="likes-profile">
-            <div class="likes-profile-container">
-                <img src="${profile.image}" class="likes-profile-img" />
-                <div class="overlay-liked">
-                    <h2>${profile.username}</h2>
-                    <p>${profile.age}</p>
-                    <p>${profile.hobby}</p>
-                </div>
-            </div>
-        </a>
+    <div class="profile-card" data-hobby="${profile.hobby}">
+    <a href="single.html?id=${profile.id}" class="likes-profile">
+    <div class="likes-profile-container">
+    <img src="${profile.image}" class="likes-profile-img" />
+    <div class="overlay-liked">
+    <h2>${profile.username}</h2>
+    <p>${profile.age}</p>
+    <p>${profile.hobby}</p>
+    </div>
+    </div>
+    </a>
     </div>
 `;
 
-
-
-
-
+/* Eksporter template der vises ved tryk på superLike */
 export const superLikesTemplate = (profil) => {
     return `
-    <video width="320" height="240" controls src="">
+    <video controls src="media/video.mp4" class="video">
     </video>
     <button class="messageBtn">Send message</button>
     `;

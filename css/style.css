@@ -6,20 +6,26 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body { 
   font-family: Arial, sans-serif; 
   margin: 0;
   background-color: #C2C2C2;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Sørger for den ikke kan scrolle vandret */
 } 
 
 /* Header */
-  
 header { 
   padding: 10px 20px; 
   background-color: #D9D9D9;
 } 
 
+/* Positionere elementerne i navbaren */
 .navbar { 
   display: flex; 
   justify-content: space-between; 
@@ -27,11 +33,13 @@ header {
   position: relative;
 } 
 
+/* Stiller logoet i midten */
 .logo {
   height: 60px;
   margin: 0 auto;
 }
 
+/* Sørger for menuen ikke vises før man trykker på burgermenuen */
 .hamburger { 
   display: block; 
   font-size: 30px; 
@@ -39,6 +47,7 @@ header {
   cursor: pointer; 
 }
 
+/* Styler vores dropdown menu */
 .filter-container select {
   display: flex;
   justify-content: center;
@@ -54,16 +63,18 @@ header {
   z-index: 1000;
 }
 
+/* Sørger for der ikke er en scrollbar i dropdown */
 #hobby {
   overflow-y: auto;
 }
 
+/* Placerer hobbyerne centreret */
 #hobby option {
   text-align: center;
   padding: 10px;
 }
 
-
+/* Hover når man fører musen over en option */
 option:hover {
   color: #80ed99;
 }
@@ -93,6 +104,8 @@ option:hover {
 
 
 /* Index styling */
+
+/* Placerer profile i flexbox */
 .profile {
   display: none;
   position: relative;
@@ -104,12 +117,14 @@ option:hover {
   display: flex;
 }
 
+/* Styling af billedet */
 .profile-img {
   width: 100%;
   height: 100vh;
-  object-fit: cover;
+  object-fit: cover; /* Sørger for det ikke strækkes */
 }
 
+/* Gennemsigtig baggrund for at gøre navn letlæslig */
 .overlay-for-name {
   position: absolute;
   top: 40%;
@@ -119,6 +134,7 @@ option:hover {
   padding: 20px;
 }
 
+/* Styling af navn */
 .name {
   text-align: center;
   color: #C84E4E;
@@ -126,6 +142,7 @@ option:hover {
   font-weight: 900;
 }
 
+/* Placering af likes, dislike og superlike knapper */
 .buttons {
   position: absolute;
   top: 65%;
@@ -139,17 +156,17 @@ option:hover {
   border: none;
   color: #80ed99;
   font-size: 75px;
-  transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; /* Sørger for en smooth transition */
 }
 
 .likeBtn:hover {
-  transform: scale(1.5);
+  transform: scale(1.5); /* Gør den en anelse større ved hover */
 }
 
 .btn-quickview {
   background-color: transparent;
   border: none;
-  margin-top: 25px;
+  margin-top: 25px; /* Sørger for den er lidt længere nede en de andre */
   color: #ffd670;
   font-size: 75px;
   transition: all .5s ease-in-out;
@@ -204,80 +221,78 @@ a {
 }
 
 /* Single styling */
+
+/* Sørger for flexbox */
 .single-profile-card {
   display: flex;
+  flex-direction: column;  
+  margin: auto;
 }
 
+/* Det øverste tekst */
+.single-profile-top {
+  display: flex; 
+  align-items: flex-start; 
+}
+
+/* Billedestyling */
 .single-profile-img {
-  width:50vw;
-  height: 100vh;
-  object-fit: cover;
+  width: 40vw;
+  height: auto;
+  object-fit: cover; /* Sørger for det ikke strækkes */
 }
 
 .single-text {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-
+  gap: 10px;
+  padding-left: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
 }
 
-.single-name {
-  font-family: 'inter';
-  font-weight: 400;
+/* Det nederste tekst */
+.single-profile-bottom {
+  margin-top: 20px;
+  margin-left: 10px; 
 }
 
+/* Sørger for at komme tilbage til index.html */
 .return {
   width: 100px;
   display: block; 
-  margin: 0 auto; 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto; 
   padding: 10px;
   border: none;
   font-size: 16px;
-}
-
-.return:hover {
-  background-color:  #80ed99;
-}
-
-/* Likes styling */
-.likes-container {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  gap: 50px; 
-  padding: 50px;
-}
-
-.profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: white;
   text-align: center;
 }
 
-.likes-profile-container {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden; 
+.return a {
+  text-decoration: none;
+  color: black;
+}
+
+.return:hover {
+  background-color: #80ed99;
+}
+
+
+/* Likes styling */
+
+/* Sørger for flexbox til alle likes*/
+.likes-container {
+  flex-grow: 1; 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 50px;
+  padding: 50px;
 }
 
-.likes-profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  
-}
-
+/* En svag baggrund bagved tekst */
 .overlay-liked {
   position: absolute;
   top: 0;
@@ -294,16 +309,76 @@ a {
   color: white;
   font-size: 14px;
   padding: 10px;
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out; 
+}
+
+.overlay-liked h2,
+.overlay-liked p {
+  opacity: 0; 
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Sørger for tekst og overlay kun vises ved hover */
+.likes-profile-container:hover .overlay-liked {
+  opacity: 1; 
+}
+
+/* Sørger for tekst og overlay kun vises ved hover */
+.likes-profile-container:hover .overlay-liked h2,
+.likes-profile-container:hover .overlay-liked p {
+  opacity: 1; 
 }
 
 
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Laver flexbox */
+.likes-profile-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling af likes profile billede */
+.likes-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  
+}
+
 /* Popover styling */
+
+/* Sørger for det placeres centreret */
 .quickview-content {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1101;
 }
 
+/* Styling til video container */
+.video {
+  width: 600px;
+  height: 400px;
+}
+
+/* Styling til besked knappen */
 .messageBtn {
   margin: 0 auto;
   margin-top: 10px;
@@ -319,50 +394,60 @@ a {
 }
 
 /* Footer */
+
+/* Footer styling */
 footer {
   background-color: #D9D9D9;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   padding: 20px;
   font-size: 30px;
   color: #5fb874;
+  width: 100%;
+  bottom: 0;
 }
 
 .fa-heart-circle-plus {
   color: #5fb874;
 }
 
-.fa-house {
-  color: #5fb874;
-}
-  
+
+/* Mobil styling */
 @media screen and (max-width: 700px) { 
-.nav-links { 
-  display: none; 
-  width: 100%; 
-  flex-direction: column; 
-  text-align: center; 
-} 
 
-.nav-links.active { 
-  display: flex; 
-} 
-  
-.nav-links li { 
-  margin: 10px 0; 
-} 
-  
-.hamburger { 
-  display: block; 
-} 
-
-.logo {
-  height: 50px;
-  margin: 0 auto;
+/* Navbaren der sørger for alt sidder som det skal */
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  box-sizing: border-box;
 }
+ 
+/* Styling til dropdown */
+.filter-container select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  position: absolute;
+  top: 90px;
+  right: -50px;
+  background-color: #333;
+  color: #fff;
+  width: 75%;
+  height: 100vh;
+  z-index: 1000;
+}
+
 
 /* Index styling */
 
+/* Knappernes placering på index */
 .buttons {
   position: absolute;
   top: 57%;
@@ -392,6 +477,7 @@ footer {
 
 /* Likes styling */
 
+/* Flex-box */
 .likes-container {
   display: flex;
   flex-wrap: wrap; 
@@ -400,6 +486,7 @@ footer {
   padding: 50px;
 }
 
+/* Flex-box */
 .profile-card {
   display: flex;
   flex-direction: column;
@@ -432,7 +519,7 @@ footer {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #d9d9d977;
+  background-color: #80808070;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -441,10 +528,52 @@ footer {
   color: white;
   font-size: 14px;
   padding: 10px;
+  opacity: 1;
 }
 
 .overlay-liked h2, .overlay-liked p {
   margin: 5px 0; 
+  opacity: 1;
+}
+
+.quickview-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  width: 320px;
+  height: 200px;
+}
+
+.return:hover, .see-profile:hover {
+  background-color: #fff;
+}
+/* Single styling */
+
+.single-profile {
+  width: 90%;
+}
+
+.single-profile-card {
+  width: 90%;
+  margin-left: -10px;
+}
+
+.single-profile-img {
+  height: 50vh;
+  width: 50vw;
+}
+
+.single-profile-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+footer {
+  width: 100%;
 }
 
 } 

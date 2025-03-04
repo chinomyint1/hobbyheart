@@ -10,7 +10,7 @@ export const pageProfile = async () => {
     return; /* går tilbage hvis single-profile ikke findes */
   }
 
-  /* får fat i id'et */
+  /* får fat i idet */
   const profileID = new URLSearchParams(location.search).get("id");
 
   if (!profileID) {

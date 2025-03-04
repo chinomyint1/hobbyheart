@@ -11,54 +11,59 @@ export const profileTemplate = (profil) => {
     <button class="dislikeBtn" id="${profil.id}"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="text">
-    <p>${profil.hobby}</p>
-    <p>${profil.searching}</p>
-    <p>${profil.city}</p>
+    <p>Likes ${profil.hobby}</p>
+    <p>Looking for ${profil.searching}</p>
+    <p>Lives in ${profil.city}</p>
     </div>
-    <p>${profil.quote}</p>
-    <button><a href="single.html?id=${profil.id}">See profile</a></button>
+    <i class="quote">${profil.quote}</i>
+    <button class="see-profile"><a href="/single.html?id=${profil.id}">See profile</a></button>
     </profile>
     `;
 }
 
 export const singleProfileTemplate = (profil) => {
     return `
-    <div class="profile">
-    <img src="${profil.image}" alt="" class="profile-img">
-    <div class="text">
-    <p>${profil.username}</p>
-    <p>${profil.age}</p>
-    <p>${profil.hobby}</p>
-    <p>${profil.searching}</p>
-    <p>${profil.city}</p>
-    <p>${profil.sexuality}</p>
-    <p>${profil.status}</p>
+    <div class="single-profile-card">
+    <img src="${profil.image}" alt="" class="single-profile-img">
+    <div class="single-text">
+    <h2 class="single-name">${profil.username}, ${profil.age}</h2>
+    <p>Likes ${profil.hobby}</p>
+    <p>Looking for ${profil.searching}</p>
+    <p>Lives in ${profil.city}</p>
+    <p>Sexuality is ${profil.sexuality}</p>
+    <p>Relationship status is ${profil.status}</p>
+    <i>${profil.quote}</i>
+    <p>Who I am 
+    <br>${profil.description}</p>
+    <button class="return"><a href="index.html">Return</a></button>
     </div>
-
-    <p>${profil.quote}</p>
-    <p>${profil.description}</p>
     </div>
     `;
 }
 
-export const likesTemplate = (profil) => {
-    return `
-    <a href="single.html?id=${profil.id}">
-    <img src="${profil.image}" alt="" class="profile-img"></a>
-    <div class="overlay-liked">
-    <p>${profil.username}</p>
-    <p>${profil.age}</p>
-    <p>${profil.hobby}</p>
+export const likesTemplate = (profile) => `
+    <div class="profile-card" data-hobby="${profile.hobby.toLowerCase()}">
+        <a href="single.html?id=${profile.id}" class="likes-profile">
+            <div class="likes-profile-container">
+                <img src="${profile.image}" class="likes-profile-img" />
+                <div class="overlay-liked">
+                    <h2>${profile.username}</h2>
+                    <p>${profile.age}</p>
+                    <p>${profile.hobby}</p>
+                </div>
+            </div>
+        </a>
     </div>
+`;
 
-    <button class="removeLikeBtn" id="${profil.id}">Remove from likes</button>
-    `;
-}
+
+
+
 
 export const superLikesTemplate = (profil) => {
     return `
     <video width="320" height="240" controls src="">
     </video>
-    <button class="closeBtn">Send message</button>
+    <button class="messageBtn">Send message</button>
     `;
 }

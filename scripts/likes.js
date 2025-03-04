@@ -1,66 +1,60 @@
-import { fetchProfiles } from "./fetch.js"
-import { likesTemplate } from "./templates.js"
+import { likesTemplate } from "./templates.js";
+import { filter } from "./filter.js";
 
-const profiles = await fetchProfiles()
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+
+  if (path.includes("likes.html")) {
+    filter();
+  }
+});
+
 
 export const likes = () => {
-    const likesContainer = document.querySelector('.likes-container')
+    const likesContainer = document.querySelector(".likes-container");
 
-    let likesArray = JSON.parse(localStorage.getItem("likeList")) || []
-
-    const likesList = () => {
-        if (likesContainer) {
-            if (likesArray.length != 0) {
-                likesContainer.innerHTML = ""
-
-                likesArray.forEach((fav) => {
-                    likesContainer.insertAdjacentHTML("beforeend", likesTemplate(likes))
-                })
-            } else {
-            likesContainer.innerHTML = `
-            <span class="empty-list">You have not liked anyone</span>
-            `
-            }
-        }
-        const removeLikeBtn = document.querySelectorAll(".removeLikesBtn")
-
-        removeLikeBtn.forEach((btn) => {
-            btn.addEventListener("click", removeFromLikes)
-        })
+    if (!likesContainer) {
+        return;
     }
-    likesList()
 
-    /* const addToLikes = (e) => {
-        const profileID = e.target.id 
-        const likeToAdd = profiles.find((profile) => profile.id == profileID)
+    let likedProfiles = JSON.parse(localStorage.getItem("likes")) || [];
 
-        const exist = likesArray.find((profile) => profile.id == profileID)
-
-        if (!exist) {
-            likesArray.push(likeToAdd)
-
-            localStorage.setItem("likeList", JSON.stringify(likesArray))
-        }
-    } */
-
-   /*  const likeBtn = document.querySelectorAll(".likeBtn")
-    likeBtn.forEach((btn) => {
-        btn.addEventListener("click", addToLikes)
-    }) */
-
-    function removeFromLikes (e){
-        const profileID = e.target.id
-
-        const index = likesArray.findIndex
-        ((profile) => profile.id == profileID)
-
-        likesArray.splice(index, 1)
-
-        localStorage.setItem("likeList", JSON.stringify(likesArray))
-        likesList()
-
-        if(likesArray.length == 0) {
-            localStorage.removeItem('likeList')
-        }
+    if (likedProfiles.length === 0) {
+        likesContainer.innerHTML = `<p>Du har ingen likede profiler.</p>`;
+        return;
     }
+
+    renderAllLikedProfiles(likedProfiles);
+};
+
+// Funktion til at vise alle likede profiler
+const renderAllLikedProfiles = (profiles) => {
+    const likesContainer = document.querySelector(".likes-container");
+    likesContainer.innerHTML = ""; // Ryd containeren
+
+    profiles.forEach(profile => {
+        likesContainer.insertAdjacentHTML("beforeend", likesTemplate(profile));
+    });
+
+    addEventListeners();
+};
+
+// Funktion til at fjerne en liket profil
+const removeLike = (profileId) => {
+    let likedProfiles = JSON.parse(localStorage.getItem("likes")) || [];
+
+    likedProfiles = likedProfiles.filter(profile => profile.id !== profileId);
+    localStorage.setItem("likes", JSON.stringify(likedProfiles));
+
+    renderAllLikedProfiles(likedProfiles);
+};
+
+// Tilføjer event listeners til "Fjern" knapper
+const addEventListeners = () => {
+    document.querySelectorAll(".removeLikeBtn").forEach(button => {
+        button.addEventListener("click", (event) => {
+            const profileId = parseInt(event.target.dataset.profileId, 10);
+            removeLike(profileId);
+        });
+    });
 }

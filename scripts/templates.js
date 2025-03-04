@@ -18,7 +18,7 @@ export const profileTemplate = (profil) => {
     <p>Lives in ${profil.city}</p>
     </div>
     <i class="quote">${profil.quote}</i>
-    <button class="see-profile"><a href="/single.html?id=${profil.id}">See profile</a></button>
+    <a href="/single.html?id=${profil.id}"><button class="see-profile">See profile</button></a>
     </profile>
     `;
 }
@@ -64,8 +64,8 @@ export const likesTemplate = (profile) => `
 
 export const superLikesTemplate = (profil) => {
     return `
-    <video width="320" height="240" controls src="">
+    <video class="video" controls src="">
     </video>
-    <button class="messageBtn">Send message</button>
+    <a href="/single.html?id=${profil.id}"><button class="messageBtn">Send message</button></a>
     `;
 }

@@ -32,6 +32,7 @@ header {
   margin: 0 auto;
 }
 
+/* Sørger for den kun vises når der klikkes på den */
 .hamburger { 
   display: block; 
   font-size: 30px; 
@@ -39,6 +40,7 @@ header {
   cursor: pointer; 
 }
 
+/* Styling til drop-down menu */
 .filter-container select {
   display: flex;
   justify-content: center;
@@ -54,6 +56,7 @@ header {
   z-index: 1000;
 }
 
+/* Fjerner scrollbar i drop-down-menu */
 #hobby {
   overflow-y: auto;
 }
@@ -62,7 +65,6 @@ header {
   text-align: center;
   padding: 10px;
 }
-
 
 option:hover {
   color: #80ed99;
@@ -100,6 +102,7 @@ option:hover {
   flex-direction: column;
 }
 
+/* Sørger for superLike button virker */
 .profile.active {
   display: flex;
 }
@@ -155,6 +158,7 @@ option:hover {
   transition: all .5s ease-in-out;
 }
 
+/* Gør knappen større ved hover */
 .btn-quickview:hover {
   transform: scale(1.5);
 }
@@ -298,18 +302,26 @@ a {
 
 
 /* Popover styling */
+#myheader {
+  margin: auto;
+}
+
 .quickview-content {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  height: 300px;
+}
+
+.video {
+  width: 500px;
 }
 
 .messageBtn {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 100px;
-  width: 100%; 
-  margin: 0 auto; 
+  width: 100%;  
   padding: 10px;
   border: none;
 }

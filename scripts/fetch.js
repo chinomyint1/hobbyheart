@@ -1,3 +1,4 @@
+/* Eksporterer function der henter data */
 export const fetchProfiles = async () => {
     try {
       const response = await fetch("../data/profil.json");
@@ -5,5 +6,5 @@ export const fetchProfiles = async () => {
       return profiles;
     } catch (error) {
       console.error("Error fetching or parsing data", error);
-    }
+    } /* Fejlbesked hvis ikke dataen kan hentes */
 }

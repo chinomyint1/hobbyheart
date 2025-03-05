@@ -1,5 +1,4 @@
 /* Eksporterer vores filter */
-
 export const filter = () => {
   const hobbySelect = document.querySelector("#hobby");
 

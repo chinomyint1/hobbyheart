@@ -69,7 +69,7 @@ export const likesTemplate = (profile) => `
 
 export const superLikesTemplate = (profil) => {
     return `
-    <video class="video" controls src="">
+    <video class="video" controls src="/media/video.mp4">
     </video>
     <a href="/single.html?id=${profil.id}"><button class="messageBtn">Send message</button></a>
     `;
